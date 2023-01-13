@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Editor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#page-list").sortable();
+        });
+    </script>
+</head>
+<body>
+    <h1>PDF Editor</h1>
+    <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_file">
+        <input type="submit" value="Edit PDF">
+    </form>
+    <hr>
+    <h2>Page List</h2>
+    <ul id="page-list">
+        <li>Page 1</li>
+        <li>Page 2</li>
+        <li>Page 3</li>
+    </ul>
+    <br>
+    <button id="add-page-button">Add Page</button>
+    <button id="delete-page-button">Delete Page</button>
+</body>
+</html>
