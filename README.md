@@ -1,1 +1,1 @@
-# ZeePDF
+# ZeeEmailTemplate
