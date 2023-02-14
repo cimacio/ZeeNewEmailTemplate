@@ -1,7 +1,7 @@
 body {
- Margin: 0 !important;
- margin: 0 !important;
- padding: 0 !important;
+ Margin: 0;
+ margin: 0;
+ padding: 0;
 }
 
 .adjustment,
@@ -9,9 +9,8 @@ body {
  width: 100%;
  table-layout: fixed;
  background-repeat: no-repeat;
- background-position: center;
+ background-position: top left;
  background-size: cover;
- padding-bottom: 15%;
 }
 
 .adjustment {
@@ -25,9 +24,6 @@ body {
  position: relative;
  background-image: url('/img/bg.png');
  overflow: hidden;
- box-sizing: border-box;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
 }
 
 .wrapper-inner {
@@ -38,8 +34,11 @@ body {
 }
 
 table {
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
  border-spacing: 0;
- font-family: sans-serif;
+ font-family: Helvetica, sans-serif;
  color: #2f3e56;
 }
 
@@ -47,9 +46,10 @@ td {
  padding: 0;
 }
 
-p {
+p, span {
  Margin: 0;
  margin: 0;
+ padding: 0;
 }
 
 a {
@@ -73,29 +73,88 @@ a {
 }
 
 .section {
- position: relative;
  width: 100%;
  text-align: center;
- margin: 120px 5%;
- max-width: 300px;
+ Margin: 0;
+ margin: 0;
  display: inline-block;
  vertical-align: top;
- isolation: isolate;
 }
 
-.content, .msg {
+.content {
  width: 100%;
  padding: 0;
  font-size: 14px;
  line-height: 1.4;
+ text-align: justify;
  hyphens: auto;
  -ms-hyphens: auto;
- word-break: break-all;
- text-align: justify;
+ word-break: break-word;
 }
 
 img {
  border: 0;
+}
+
+.main {
+ max-width: 400px;
+}
+
+.side {
+ max-width: 200px;
+}
+
+.letter-head {
+ width: 100%;
+ position: relative;
+ table-layout: fixed;
+ background-color: #ebebeb;
+}
+
+.blue-square {
+ width: 20px;
+ position: absolute;
+ top: 0;
+ right: 0;
+}
+
+.letter-head-texture {
+ width: 100%;
+ position: absolute;
+ inset: 0;
+ background-repeat: no-repeat;
+ background-position: top left;
+ background-size: cover;
+ background-image: url('/img/texture-letter.png');
+ opacity: .4;
+}
+
+.brand {
+ width: 100%;
+ font-size: 0;
+ text-align: center;
+ padding: 40px 0 20px;
+}
+
+.logo {
+ width: 20px;
+ margin-right: 5px;
+}
+
+.company {
+ font-size: 18px;
+}
+
+.logo,
+.company {
+ text-align: center;
+ vertical-align: top;
+}
+
+.msg {
+ max-width: 320px;
+ text-align: left;
+ margin: 0 auto;
 }
 
 .signature {
@@ -104,11 +163,16 @@ img {
 }
 
 .actual-sig {
- width: 40%;
+ width: 30%;
  padding-left: 20px;
 }
 
-.envelope {
+.side-notes {
+ width: 80%;
+/*  max-width: 140px; */
+}
+
+/*.envelope {
  width: 100%;
  position: relative;
 }
