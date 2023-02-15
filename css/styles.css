@@ -17,7 +17,7 @@
  position: absolute;
  inset: 0;
  background-image: url('/img/adjustment.png');
- z-index: 2;
+ z-index: 5;
 }
 
 .wrapper {
@@ -28,7 +28,7 @@
 
 .wrapper-inner {
  width: 100%;
- max-width: 800px;
+ max-width: 1000px;
  Margin: 0 auto;
  margin: 0 auto;
 }
@@ -38,7 +38,7 @@ table {
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
  border-spacing: 0;
- font-family: Helvetica, sans-serif;
+ font-family: 'Montserrat', Helvetica, sans-serif;
  color: #2f3e56;
 }
 
@@ -60,9 +60,10 @@ a {
 /*--- End Outer Table 1 --*/
 .main-table {
  width: 100%;
- max-width: 800px;
+ max-width: 1000px;
  Margin: 0 auto;
  margin: 0 auto;
+ padding: 2% 0 10%;
 }
 
 /*--- Start Two Column Sections --*/
@@ -73,49 +74,50 @@ a {
 }
 
 .section {
+ position: relative;
  width: 100%;
+ max-width: 400px;
  text-align: center;
  Margin: 0;
  margin: 0;
+ padding: 0;
+ border-spacing: 0;
  display: inline-block;
  vertical-align: top;
+ isolation: isolate;
 }
 
 .content {
  width: 100%;
+ Margin: 0;
+ margin: 0;
  padding: 0;
- font-size: 14px;
+ border-spacing: 0;
+ font-size: 13px;
  line-height: 1.4;
- text-align: justify;
- hyphens: auto;
- -ms-hyphens: auto;
- word-break: break-word;
 }
 
 img {
  border: 0;
 }
 
-.main {
- max-width: 400px;
-}
-
-.side {
- max-width: 200px;
-}
-
 .letter-head {
  width: 100%;
- position: relative;
  table-layout: fixed;
  background-color: #ebebeb;
 }
 
 .blue-square {
- width: 20px;
+ width: 50px;
+ height: 40px;
  position: absolute;
- top: 0;
- right: 0;
+ inset: 0 0 auto auto;
+ background-repeat: no-repeat;
+ background-position: top right;
+ background-size: cover;
+ background-image: url('/img/blue-square.png');
+ z-index: 1;
+ mix-blend-mode: hard-light;
 }
 
 .letter-head-texture {
@@ -129,37 +131,69 @@ img {
  opacity: .4;
 }
 
+.spacer {
+ z-index: 2;
+ font-size: 0;
+ width: 100%;
+ max-width: 20px;
+ padding: 110px;
+ margin: 0 auto;
+}
+
+.flap,
+.envelope {
+ position: absolute;
+}
+
+.flap {
+ z-index: -2;
+ width: 100%;
+ bottom: 150px;
+ left: -17px;
+}
+
+.envelope {
+ width: 120%;
+ bottom: -60px;
+ left: -50px;
+ z-index: 2;
+}
+
 .brand {
  width: 100%;
- font-size: 0;
- text-align: center;
- padding: 40px 0 20px;
+ font-size: 16px;
+ text-align: left;
+ padding: 40px 40px 15px;
 }
 
 .logo {
- width: 20px;
- margin-right: 5px;
-}
-
-.company {
- font-size: 18px;
+ width: 1.4em;
+ margin-right: .2em;
+ mix-blend-mode: darken;
 }
 
 .logo,
 .company {
- text-align: center;
  vertical-align: top;
 }
 
+.break {
+ width: 80%;
+}
+
 .msg {
+ width: 100%;
  max-width: 320px;
- text-align: left;
  margin: 0 auto;
+ text-align: justify;
+ hyphens: auto;
+ -ms-hyphens: auto;
 }
 
 .signature {
  text-align: left;
  line-height: 1.1;
+ font-size: 1.1em;
 }
 
 .actual-sig {
@@ -168,43 +202,8 @@ img {
 }
 
 .side-notes {
- width: 80%;
-/*  max-width: 140px; */
-}
-
-/*.envelope {
  width: 100%;
- position: relative;
-}
-
-.flap,
-.actual-envelope {
- position: absolute;
-}
-
-.actual-envelope {
- width: 170%;
- inset: -35px -34% 35px;
-}
-
-.flap {
- width: 146.5%;
- inset: -165px -23% 165px;
- z-index: -2;
-}
-
-.letter-head-texture,
-.letter-head {
- position: absolute;
- width: 140%;
- inset: -110px -20%;
-}
-
-.letter-head-texture {
- opacity: .2;
-}
-
-.letter-head {
- background-color: #ebebeb;
- z-index: -1;
+ max-width: 300px;
+ margin: 0 auto;
+ color: #fff;
 }
