@@ -38,7 +38,6 @@ table {
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
  border-spacing: 0;
- font-family: 'Montserrat', Helvetica, sans-serif;
  color: #2f3e56;
 }
 
@@ -60,7 +59,7 @@ a {
 /*--- End Outer Table 1 --*/
 .main-table {
  width: 100%;
- max-width: 1000px;
+ max-width: 800px;
  Margin: 0 auto;
  margin: 0 auto;
  padding: 2% 0 10%;
@@ -71,6 +70,8 @@ a {
  text-align: center;
  font-size: 0;
  padding: 0;
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 400;
 }
 
 .section {
@@ -93,8 +94,8 @@ a {
  margin: 0;
  padding: 0;
  border-spacing: 0;
- font-size: 13px;
- line-height: 1.4;
+ font-size: 12px;
+ line-height: 1.5;
 }
 
 img {
@@ -108,16 +109,12 @@ img {
 }
 
 .blue-square {
- width: 50px;
- height: 40px;
+ width: 45px;
+ height: 35px;
  position: absolute;
  inset: 0 0 auto auto;
- background-repeat: no-repeat;
- background-position: top right;
- background-size: cover;
- background-image: url('/img/blue-square.png');
- z-index: 1;
- mix-blend-mode: hard-light;
+ background-color: #00386c;
+ mix-blend-mode: darken;
 }
 
 .letter-head-texture {
@@ -128,7 +125,8 @@ img {
  background-position: top left;
  background-size: cover;
  background-image: url('/img/texture-letter.png');
- opacity: .4;
+ mix-blend-mode: multiply;
+ opacity: .3;
 }
 
 .spacer {
@@ -148,7 +146,7 @@ img {
 .flap {
  z-index: -2;
  width: 100%;
- bottom: 150px;
+ bottom: 145px;
  left: -17px;
 }
 
@@ -161,20 +159,24 @@ img {
 
 .brand {
  width: 100%;
- font-size: 16px;
+ font-size: 18px;
  text-align: left;
  padding: 40px 40px 15px;
 }
 
 .logo {
  width: 1.4em;
- margin-right: .2em;
- mix-blend-mode: darken;
+ margin-right: .1em;
 }
 
 .logo,
 .company {
  vertical-align: top;
+}
+
+.company {
+ font-family: 'Oswald', sans-serif;
+ font-weight: 700;
 }
 
 .break {
