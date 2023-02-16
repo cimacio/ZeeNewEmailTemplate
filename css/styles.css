@@ -21,7 +21,7 @@
  background-position: top left;
  background-size: cover;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
 }
 
 .adjustment {
@@ -135,7 +135,7 @@ a {
 img {
  border: 0;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
  outline: none;
 }
 
@@ -144,7 +144,7 @@ img {
  table-layout: fixed;
  background-color: #fff;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
 }
 
 .blue-square {
@@ -154,7 +154,7 @@ img {
  inset: 0 0 auto auto;
  background-color: #00386c;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
 }
 
 .letter-head-texture {
@@ -166,7 +166,7 @@ img {
  background-size: cover;
  background-image: url('/img/texture-letter.png');
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
  opacity: .3;
  mix-blend-mode: multiply;
 }
@@ -174,19 +174,28 @@ img {
 .spacer {
  z-index: 2;
  font-size: 0;
- width: 20px;
- padding: 60px;
+ width: 2%;
+ padding: 10%;
  margin: 0 auto;
 }
 
 .flap,
 .envelope {
- position: absolute;
- -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ display: none;
 }
 
-.flap {
+.flap2,
+.envelope2 {
+ position: absolute;
+ inset: 65% -20% -80% -6%;
+ background-repeat: no-repeat;
+ background-position: top center;
+ background-size: contain;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+}
+
+/* .flap {
  z-index: -2;
  max-width: 100%;
  bottom: 8%;
@@ -199,7 +208,20 @@ img {
  left: -12.5%;
  z-index: 2;
 }
+ */
+ 
+.flap2 {
+ z-index: -2;
+ background-image: url('/img/flap2.png');
+ opacity: 0.5;
+}
 
+.envelope2 {
+ z-index: 2;
+ background-image: url('/img/envelope2.png');
+}
+
+ 
 .brand {
  max-width: 100%;
  padding: 0;
@@ -230,7 +252,7 @@ img {
  width: 1.3em;
  height: 1.3em;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
  background-repeat: no-repeat;
  background-position: center;
  background-size: contain;
@@ -243,7 +265,6 @@ img {
 
 .msg {
  width: 300px;
- margin: 0 auto;
  font-family: 'Open Sans', sans-serif;
  font-weight: 400;
 }
@@ -255,8 +276,12 @@ img {
 }
 
 .actual-sig {
- width: 30%;
- padding-left: 20px;
+ width: 43%;
+ height: 30px;
+ background-repeat: no-repeat;
+ background-position: right;
+ background-size: contain;
+ background-image: url('/img/signature.png');
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
 }
