@@ -107,6 +107,7 @@ a {
  padding: 0;
  font-family: 'Open Sans', sans-serif;
  font-weight: 400;
+ isolation: isolate;
 }
 
 .section {
@@ -119,7 +120,6 @@ a {
  border-spacing: 0;
  display: inline-block;
  vertical-align: top;
- isolation: isolate;
 }
 
 .content {
@@ -139,14 +139,6 @@ img {
  outline: none;
 }
 
-.letter-head {
- max-width: 100%;
- table-layout: fixed;
- background-color: #fff;
- -ms-interpolation-mode: bicubic;
- image-rendering: optimizeSpeed;
-}
-
 .blue-square {
  width: 50px;
  height: 35px;
@@ -157,18 +149,36 @@ img {
  image-rendering: optimizeSpeed;
 }
 
+.letter-head {
+ background-color: transparent;
+ width: 100%;
+}
+
+.letter-head-cover {
+ inset: 0 -11.5px 0 0;
+ background-image: url('/img/A4-letter-head.png');
+ z-index: -1;
+}
+
 .letter-head-texture {
- max-width: 100%;
- position: absolute;
  inset: 0;
+ background-image: url('/img/texture-letter.png');
+ opacity: .3;
+ mix-blend-mode: multiply;
+}
+
+.letter-head-cover,
+.letter-head-texture {
+ padding: 0;
+ Margin: 0;
+ margin: 0;
+ position: absolute;
+ table-layout: fixed;
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
- background-image: url('/img/texture-letter.png');
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
- opacity: .3;
- mix-blend-mode: multiply;
 }
 
 .spacer {
@@ -195,25 +205,10 @@ img {
  image-rendering: optimizeSpeed;
 }
 
-/* .flap {
- z-index: -2;
- max-width: 100%;
- bottom: 8%;
- left: -4.5%;
-}
-
-.envelope {
- max-width: 120%;
- bottom: -30%;
- left: -12.5%;
- z-index: 2;
-}
- */
- 
 .flap2 {
  z-index: -2;
  background-image: url('/img/flap2.png');
- opacity: 0.5;
+ mix-blend-mode: darken;
 }
 
 .envelope2 {
