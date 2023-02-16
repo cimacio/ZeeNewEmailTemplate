@@ -111,8 +111,7 @@ a {
 
 .section {
  position: relative;
- width: 100%;
- max-width: 400px;
+ width: 400px;
  text-align: center;
  Margin: 0;
  margin: 0;
@@ -168,16 +167,15 @@ img {
  background-image: url('/img/texture-letter.png');
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeQuality;
- opacity: .5;
+ opacity: .3;
  mix-blend-mode: multiply;
 }
 
 .spacer {
  z-index: 2;
  font-size: 0;
- width: 100%;
- max-width: 20px;
- padding: 110px;
+ width: 20px;
+ padding: 60px;
  margin: 0 auto;
 }
 
@@ -190,29 +188,37 @@ img {
 
 .flap {
  z-index: -2;
- width: 100%;
- bottom: 145px;
- left: -17px;
+ max-width: 100%;
+ bottom: 8%;
+ left: -4.5%;
 }
 
 .envelope {
- width: 120%;
- bottom: -60px;
- left: -50px;
+ max-width: 120%;
+ bottom: -30%;
+ left: -12.5%;
  z-index: 2;
 }
 
 .brand {
- width: 100%;
- font-size: 19px;
- text-align: left;
- padding: 40px 40px 15px;
+ max-width: 100%;
+ padding: 0;
+ Margin: 0;
+ margin: 0;
+ font-size: 18px;
+ text-align: center;
+ padding: 45px 40px 15px;
 }
 
 .logo,
 .company {
+ border-spacing: none;
+ padding: 0;
+ Margin: 0;
+ margin: 0;
  display: inline-block;
  vertical-align: top;
+ text-align: left;
 }
 
 .company {
@@ -221,8 +227,8 @@ img {
 }
 
 .logo {
- width: 1.4em;
- height: 1.5em;
+ width: 1.3em;
+ height: 1.3em;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeQuality;
  background-repeat: no-repeat;
@@ -236,8 +242,7 @@ img {
 }
 
 .msg {
- width: 100%;
- max-width: 320px;
+ width: 300px;
  margin: 0 auto;
  font-family: 'Open Sans', sans-serif;
  font-weight: 400;
@@ -253,7 +258,7 @@ img {
  width: 30%;
  padding-left: 20px;
  -ms-interpolation-mode: bicubic;
- image-rendering: optimizeQuality;
+ image-rendering: optimizeSpeed;
 }
 
 .side-notes {
