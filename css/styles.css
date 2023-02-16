@@ -140,7 +140,7 @@ img {
 }
 
 .letter-head {
- width: 100%;
+ max-width: 100%;
  table-layout: fixed;
  background-color: #fff;
  -ms-interpolation-mode: bicubic;
@@ -158,7 +158,7 @@ img {
 }
 
 .letter-head-texture {
- width: 100%;
+ max-width: 100%;
  position: absolute;
  inset: 0;
  background-repeat: no-repeat;
