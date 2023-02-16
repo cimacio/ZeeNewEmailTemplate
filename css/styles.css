@@ -166,9 +166,9 @@ img {
  background-position: center;
  background-size: cover;
  background-image: url('/img/texture-letter.png');
- opacity: .4;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeQuality;
+ opacity: .5;
  mix-blend-mode: multiply;
 }
 
@@ -239,12 +239,14 @@ img {
  width: 100%;
  max-width: 320px;
  margin: 0 auto;
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 400;
 }
 
 .signature {
  text-align: left;
  line-height: 1.1;
- font-size: 1.1em;
+ font-size: 1em;
 }
 
 .actual-sig {
