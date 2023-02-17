@@ -55,8 +55,6 @@
  max-width: 800px;
  Margin: 0 auto;
  margin: 0 auto;
- font-family: 'Open Sans', sans-serif;
- font-weight: 400;
 }
 
 table, tr, td {
@@ -78,6 +76,9 @@ p {
  Margin: 0;
  margin: 0;
  padding: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ line-height: 1.4;
  text-align: justify;
  word-wrap: break-word;
  hyphens: auto;
@@ -105,12 +106,9 @@ a {
  text-align: center;
  font-size: 0;
  padding: 0;
- font-family: 'Open Sans', sans-serif;
- font-weight: 400;
 }
 
 .section {
- position: relative;
  width: 400px;
  text-align: center;
  Margin: 0;
@@ -123,13 +121,11 @@ a {
 }
 
 .content {
- width: 100%;
+ position: relative;
+ max-width: 320px;
  Margin: 0;
  margin: 0;
  padding: 0;
- border-spacing: 0;
- font-size: 14px;
- line-height: 1.4;
 }
 
 img {
@@ -185,15 +181,14 @@ img {
  z-index: 2;
  font-size: 0;
  width: 2%;
- padding: 2%;
+ padding: 8%;
  margin: 0 auto;
 }
-
 
 .flap,
 .envelope {
  position: absolute;
- inset: 70% -20% -80% -6%;
+ inset: 70% -19.5% -80% -6%;
  background-repeat: no-repeat;
  background-position: top center;
  background-size: contain;
@@ -211,15 +206,14 @@ img {
  background-image: url('/img/envelope.png');
 }
 
- 
 .brand {
  max-width: 100%;
  padding: 0;
  Margin: 0;
  margin: 0;
- font-size: 18px;
+ font-size: 16px;
  text-align: center;
- padding: 45px 40px 15px;
+ padding: 50px 0 15px;
 }
 
 .logo,
@@ -234,13 +228,13 @@ img {
 }
 
 .company {
- font-family: 'Oswald', sans-serif;
- font-weight: 700;
+ font-size: 1.1em;
+ font-weight: bold;
 }
 
 .logo {
- width: 1.3em;
- height: 1.3em;
+ width: 1.4em;
+ height: 1.5em;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
  background-repeat: no-repeat;
@@ -254,9 +248,19 @@ img {
 }
 
 .msg {
- width: 300px;
- font-family: 'Open Sans', sans-serif;
- font-weight: 400;
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 80%;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ line-height: 1.4;
+ text-align: justify;
+ word-wrap: break-word;
+ hyphens: auto;
+ -ms-hyphens: auto;
+ -moz-hyphens: auto;
+ -webkit-hyphens: auto;
 }
 
 .signature {
@@ -266,7 +270,7 @@ img {
 }
 
 .actual-sig {
- width: 43%;
+ width: 40%;
  height: 30px;
  background-repeat: no-repeat;
  background-position: right;
@@ -277,8 +281,7 @@ img {
 }
 
 .side-notes {
- width: 100%;
- max-width: 300px;
+ width: 80%;
  margin: 0 auto;
  color: #fff;
 }
