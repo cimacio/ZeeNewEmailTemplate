@@ -88,10 +88,10 @@ a {
 /*--- End Outer Table 1 --*/
 .main-table {
  width: 100%;
- max-width: 800px;
+ max-width: 600px;
  Margin: 0 auto;
  margin: 0 auto;
- padding: 2% 0 10%;
+ padding: 2% 0 5%;
 }
 
 /*--- Start Two Column Sections --*/
@@ -103,25 +103,31 @@ a {
 
 .section {
  position: relative;
- width: 400px;
  text-align: center;
  Margin: 0;
  margin: 0;
  padding: 0;
+ max-width: 100%;
  border-spacing: 0;
  display: inline-block;
  vertical-align: top;
- z-index: -1;
  isolation: isolate;
 }
 
+.main {
+ width: 360px;
+}
+
+.side {
+ width: 240px;
+}
+
 .content {
- max-width: 80%;
+ max-width: 75%;
  Margin: 0 auto;
  margin: 0 auto;
  padding: 0;
  text-align: center;
- mix-blend-mode: multiply;
 }
 
 img {
@@ -133,34 +139,37 @@ img {
 
 .content-holder {
  min-width: 100%;
- font-size: 14px;
+ font-size: 13px;
 }
 
 .blue-square {
- width: 50px;
- height: 35px;
+ width: 45px;
+ height: 30px;
  position: absolute;
  inset: 0 0 auto auto;
  background-color: #00386c;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
- mix-blend-mode: multiply;
 }
 
 .letter-head {
  background-color: #ebebeb;
- max-width: 100%;
+ inset: 0;
+ z-index: -2;
 }
 
 .letter-head-cover {
- inset: 0 -11.5px 0 -1px;
  background-image: url('/img/A4-letter-head.png');
+ z-index: -1;
+ inset: 0 -2.8% 0 0;
 }
 
 .letter-head-texture {
  inset: 0;
  background-image: url('/img/texture-letter.png');
- opacity: .4;
+ opacity: .7;
+ mix-blend-mode: multiply;
+ z-index: 1;
 }
 
 .letter-head,
@@ -170,13 +179,11 @@ img {
  Margin: 0;
  margin: 0;
  position: absolute;
- table-layout: fixed;
  background-repeat: no-repeat;
- background-position: center;
+ background-position: top right;
  background-size: cover;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
- z-index: -1;
 }
 
 .spacer {
@@ -199,11 +206,12 @@ img {
 
 .flap {
  background-image: url('/img/flap.png');
- z-index: -1;
+ z-index: -3;
 }
 
 .envelope {
  background-image: url('/img/envelope.png');
+ z-index: 2;
 }
 
 .brand {
@@ -211,7 +219,7 @@ img {
  padding: 0;
  Margin: 0 auto;
  margin: 0 auto;
- font-size: 16px;
+ font-size: 14px;
  text-align: center;
  padding: 15% 0 5%;
 }
@@ -233,8 +241,8 @@ img {
 }
 
 .logo {
- width: 1.6em;
- height: 1.6em;
+ width: 1.5em;
+ height: 1.3em;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
  background-repeat: no-repeat;
@@ -265,8 +273,12 @@ img {
 
 .signature {
  text-align: left;
- line-height: 1.1;
  font-size: 1em;
+}
+
+.zee {
+ line-height: 1;
+ font-weight: bold;
 }
 
 .actual-sig {
@@ -290,12 +302,12 @@ img {
 }
 
 .side-notes {
- padding: 75px 0 40px;
+ padding: 30px 0 40px;
  margin: 0 12%;
  max-width: 80%;
  color: #2f3e56;
  font-family: Arial, Helvetica, sans-serif;
- font-size: .7em;
+ font-size: .5em;
  line-height: 1.2;
  text-align: left;
  word-wrap: break-word;
@@ -306,9 +318,9 @@ img {
 }
 
 .heading {
- font-size: 2em;
+ font-size: 1.5em;
  font-weight: bold;
- line-height: 2;
+ line-height: 2.5;
 }
 
 .list {
@@ -326,14 +338,13 @@ img {
  line-height: 1.5;
  font-weight: normal;
  font-size: .9em;
- /* color: #2f3e56; */
  opacity: 0.6;
 }
 
 .example-holder,
 .requirements {
  max-width: 100%;
- padding: 10px 0;
+ padding: 8px 0;
 }
 
 .sample,
@@ -356,5 +367,5 @@ img {
 .detail {
  text-align: left;
  font-size: 1em;
- padding-bottom: 12px;
+ padding-bottom: 1.5em;
 }
