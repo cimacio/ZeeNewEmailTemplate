@@ -347,12 +347,13 @@ mark {
  font-size: 2em;
  font-weight: bold;
  line-height: 2.5;
+ padding: 0 4px;
  mix-blend-mode: multiply;
 }
 
 .list {
  max-width: 100%;
- padding: 2px 4px;
+ padding: 0 6px;
  font-weight: bold;
  line-height: 1.5;
 }
@@ -360,7 +361,7 @@ mark {
 .subtext {
  max-width: 100%;
  display: inline-block;
- padding: 0 6px;
+ padding: 0 8px;
  line-height: 1.3;
  font-weight: normal;
  font-size: .8em;
@@ -389,12 +390,12 @@ mark {
 }
 
 .label {
- opacity: .8;
- font-size: .9em;
+ opacity: .6;
+ font-size: .6em;
  letter-spacing: 1.4px;
 }
 
 .detail {
  text-align: left;
- padding-bottom: 1em;
+ padding: 0 3px 1em;
 }
