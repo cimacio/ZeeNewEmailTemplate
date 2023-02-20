@@ -310,7 +310,7 @@ img {
  position: absolute;
  background-repeat: no-repeat;
  background-position: top left;
- background-size: contain;
+ background-size: 100%;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
 }
@@ -320,7 +320,7 @@ img {
  width: 55px;
  height: 55px;
  inset: -24px -14px auto auto;
- background-image: url("/img/pdf.png");
+ background-image: url("/img/pdf2.png");
  mix-blend-mode: multiply;
 }
 
@@ -329,15 +329,15 @@ img {
  width: 230px;
  height: 70px;
  inset: auto auto -68px 18px;
- background-image: url("/img/marker.png");
+ background-image: url("/img/marker2.png");
 }
 
 .pen {
  /* inset: 8% 0 2% -20%; */
- width: 100px;
- height: 340px;
+ width: 70px;
+ height: 315px;
  inset: 20px auto auto -45px;
- background-image: url("/img/pen.png");
+ background-image: url("/img/pen2.png");
  z-index: 2;
 }
 
@@ -346,7 +346,7 @@ img {
  width: 310px;
  height: 470px;
  inset: -46.5px auto auto -20px;
- background-image: url("/img/notes.png");
+ background-image: url("/img/notes2.png");
 }
 
 .side-notes {
