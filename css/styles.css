@@ -32,14 +32,14 @@
 .adjustment {
  position: absolute;
  inset: 0;
- background-image: url("/img/adjustment.png");
+ background-image: url("/img/adjustment2.png");
  mix-blend-mode: multiply;
  z-index: 1;
 }
 
 .wrapper {
  position: relative;
- background-image: url("/img/bg.png");
+ background-image: url("/img/bg2.png");
  overflow: hidden;
  margin: 0;
  margin: 0;
@@ -192,10 +192,11 @@ img {
 }
 
 .blue-square {
- width: 62px;
- height: 46px;
- inset: -61px -64px auto auto;
+ width: 86px;
+ height: 60px;
+ inset: -61.5px -79.5px auto auto;
  background-image: url("/img/blue-square.png");
+ mix-blend-mode: multiply;
 }
 
 .letter-head {
@@ -206,7 +207,7 @@ img {
 
 .letter-head-cover {
  background-image: url("/img/A4-letter-head.png");
- inset: -63px -77px -73px -65px;
+ /* inset: -63px -77px -73px -65px; */
 }
 
 .flap,
@@ -252,8 +253,8 @@ img {
 }
 
 .logo {
- width: 1.5em;
- height: 1.6em;
+ width: 24px;
+ height: 25.6px;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
  background-repeat: no-repeat;
