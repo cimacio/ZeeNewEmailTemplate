@@ -16,9 +16,10 @@
 .adjustment,
 .wrapper {
  width: 100%;
+ height: 100%;
  table-layout: fixed;
  background-repeat: no-repeat;
- background-position: top left;
+ background-position: 0;
  background-size: cover;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
@@ -313,45 +314,56 @@ img {
 }
 
 .pdf {
- inset: -6.2% -14% 91% 82.6%;
+ /* inset: -6.2% -14% 91% 82.6%; */
+ width: 55px;
+ height: 55px;
+ inset: -24px -14px auto auto;
  background-image: url("/img/pdf.png");
  mix-blend-mode: multiply;
 }
 
 .marker {
- inset: 100% 0 -32% 2%;
+ /* inset: 100% 0 -32% 2%; */
+ width: 230px;
+ height: 70px;
+ inset: auto auto -68px 18px;
  background-image: url("/img/marker.png");
 }
 
 .pen {
- inset: 8% 0 2% -20%;
+ /* inset: 8% 0 2% -20%; */
+ width: 100px;
+ height: 340px;
+ inset: 20px auto auto -45px;
  background-image: url("/img/pen.png");
  z-index: 2;
 }
 
 .add-ons-bg {
- inset: -46px -45px -80px -21px;
+ /* inset: -46px -45px -80px -21px; */
+ width: 310px;
+ height: 470px;
+ inset: -46.5px auto auto -20px;
  background-image: url("/img/notes.png");
- z-index: 0;
 }
 
 .side-notes {
- position: relative;
- max-width: 100%;
- height: 370px;
- max-height: 370px;
- min-height: 100%;
- color: #2f3e56;
- font-family: Arial, Helvetica, sans-serif;
- font-size: 0.67em;
- line-height: 1.2;
- text-align: left;
- text-justify: inter-character;
- word-wrap: break-word;
- hyphens: auto;
- -ms-hyphens: auto;
- -moz-hyphens: auto;
- -webkit-hyphens: auto;
+ position:relative; 
+ max-width:100%; 
+ height:370px; 
+ max-height:370px; 
+ min-height:100%; 
+ color:#2f3e56; 
+ font-family:Arial,Helvetica,sans-serif; 
+ font-size:0.67em; 
+ line-height:1.2; 
+ text-align:left; 
+ text-justify:inter-character; 
+ word-wrap:break-word; 
+ hyphens:auto; 
+ -ms-hyphens:auto; 
+ -moz-hyphens:auto; 
+ -webkit-hyphens:auto;
 }
 
 mark {
@@ -382,7 +394,7 @@ mark {
 .subtext {
  max-width: 100%;
  display: inline-block;
- padding: 0 14px 0 18px;
+ padding: 0 12px 0 18px;
  line-height: 1.2;
  font-weight: normal;
  font-size: 0.95em;
@@ -421,4 +433,8 @@ mark {
  font-size: 1.1em;
  text-align: left;
  padding: 0 2px 0.5em 8px;
+}
+
+.utilities {
+ font-size: 0;
 }
