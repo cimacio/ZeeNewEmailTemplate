@@ -185,7 +185,7 @@ img {
  position: absolute;
  background-repeat: no-repeat;
  background-position: bottom right;
- background-size: cover;
+ background-size: contain;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
  z-index: -1;
@@ -194,9 +194,9 @@ img {
 .blue-square {
  width: 86px;
  height: 60px;
- inset: -61.5px -79.5px auto auto;
+ inset: -60.5px -78.4px auto auto;
  background-image: url("/img/blue-square.png");
- mix-blend-mode: multiply;
+ mix-blend-mode: darken;
 }
 
 .letter-head {
@@ -208,12 +208,20 @@ img {
 .letter-head-cover {
  background-image: url("/img/A4-letter-head.png");
  /* inset: -63px -77px -73px -65px; */
+ width: 452px;
+ height: 635px;
+ top: -62px;
+ left: -56px;
 }
 
 .flap,
 .envelope {
- inset: 0 -53% -75% -33%;
- background-size: contain;
+ /* inset: 0 -53% -75% -33%;
+ background-size: contain; */
+ width: 590px;
+ height: 510px;
+ bottom: -375px;
+ left: -100px;
 }
 
 .flap {
@@ -230,7 +238,7 @@ img {
  margin: 0 auto;
  margin: 0 auto;
  text-align: center;
- padding: 10px 0 20px;
+ padding: 5px 0 20px;
 }
 
 .logo,
@@ -254,7 +262,7 @@ img {
 
 .logo {
  width: 24px;
- height: 25.6px;
+ height: 26px;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
  background-repeat: no-repeat;
@@ -294,10 +302,11 @@ img {
 }
 
 .actual-sig {
- width: 45%;
- height: 2em;
+ width: 135px;
+ height: 40px;
+ margin-left: 25px;
  background-repeat: no-repeat;
- background-position: right;
+ background-position: center;
  background-size: contain;
  background-image: url("/img/signature.png");
  -ms-interpolation-mode: bicubic;
@@ -310,8 +319,8 @@ img {
 .pdf {
  position: absolute;
  background-repeat: no-repeat;
- background-position: top left;
- background-size: 100%;
+ background-position: center;
+ background-size: contain;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
 }
