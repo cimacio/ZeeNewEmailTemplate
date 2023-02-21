@@ -1,578 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" href="css/styles.css">
-    <style type="text/css">
-      body {
-        margin: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-width: 100%;
-        -webkit-text-size-adjust: 0;
-        -ms-text-size-adjust: 0;
-        -moz-text-size-adjust: 0;
-        text-size-adjust: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
 
-      .adjustment,
-      .wrapper {
-        width: 100%;
-        table-layout: fixed;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: cover;
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-        background-attachment: fixed;
-        background-origin: border-box;
-      }
+<head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
-      .adjustment {
-        position: absolute;
-        inset: 0;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/adjustment.png");
-        mix-blend-mode: multiply;
-        z-index: 1;
-      }
+ <link rel="stylesheet" href="css/styles.css">
 
-      .wrapper {
-        position: relative;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/bg.png");
-        overflow: hidden;
-        margin: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-width: 100%;
-        -webkit-text-size-adjust: 0;
-        -ms-text-size-adjust: 0;
-        -moz-text-size-adjust: 0;
-        text-size-adjust: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        isolation: isolate;
-      }
+<style type="text/css">
 
-      .wrapper-inner {
-        width: 100%;
-        max-width: 800px;
-        text-align: center;
-        margin: 0 auto;
-        Margin: 0 auto;
-      }
+.body {
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ height: 100%;
+ min-width: 100%;
+ min-height: 100%;
+ -webkit-text-size-adjust: 0;
+ -ms-text-size-adjust: 0;
+ -moz-text-size-adjust: 0;
+ text-size-adjust: 0;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
 
-      table,
-      tr,
-      td {
-        margin: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        border-spacing: 0;
-        table-layout: fixed;
-        color: #2f3e56;
-      }
+.adjustment,
+.wrapper {
+ width: 100%;
+ height: 100%;
+ table-layout: fixed;
+ background-repeat: no-repeat;
+ background-position: cen;
+ background-size: cover;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ background-attachment: fixed;
+ background-origin: border-box;
+}
 
-      p {
-        margin: 0;
-        margin: 0;
-        padding: 0;
-      }
+.adjustment {
+ position: absolute;
+ inset: 0;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/adjustment2.png");
+ mix-blend-mode: multiply;
+ z-index: 1;
+}
 
-      a {
-        color: #2f3e56;
-        text-decoration: none;
-      }
+.wrapper {
+ position: relative;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/bg2.png");
+ overflow: hidden;
+ margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ min-width: 100%;
+ -webkit-text-size-adjust: 0;
+ -ms-text-size-adjust: 0;
+ -moz-text-size-adjust: 0;
+ text-size-adjust: 0;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ isolation: isolate;
+}
 
-      /*--- End Outer Table 1 --*/
-      .main-table {
-        width: 100%;
-        max-width: 650px;
-        Margin: 0 auto;
-        margin: 0 auto;
-        padding: 5% 0;
-      }
+.wrapper-inner {
+ width: 100%;
+ max-width: 800px;
+ text-align: left;
+ margin: 0 auto;
+}
 
-      /*--- Start Two Column Sections --*/
-      .three-column {
-        text-align: center;
-        font-size: 0;
-        Margin: 0 auto;
-        margin: 0 auto;
-        padding: 0;
-        display: inline-block;
-      }
+table,
+tr,
+td {
+ margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ border-spacing: 0;
+ table-layout: fixed;
+ color: #2f3e56;
+}
 
-      .section {
-        position: relative;
-        text-align: center;
-        Margin: 0 auto;
-        margin: 0 auto;
-        padding: 0;
-        max-width: 100%;
-        height: 100%;
-        min-height: 100%;
-        border-spacing: 0;
-        display: inline-block;
-        vertical-align: bottom;
-      }
+p {
+ margin: 0;
+ margin: 0;
+ padding: 0;
+}
 
-      .main {
-        width: 320px;
-        min-width: 320px;
-        max-width: 320px;
-        height: 500px;
-        max-height: 500px;
-        isolation: isolate;
-      }
+a {
+ color: #2f3e56;
+ text-decoration: none;
+}
 
-      .mid {
-        width: 85px;
-        min-width: 85px;
-        max-width: 85px;
-      }
+/*--- End Outer Table 1 --*/
+.main-table {
+ width: 100%;
+ max-width: 650px;
+ Margin: 0 auto;
+ margin: 0 auto;
+ padding: 5% 0;
+}
 
-      .side {
-        margin-top: 160px;
-        min-width: 245px;
-        max-width: 245px;
-      }
+/*--- Start Two Column Sections --*/
+.three-column {
+ text-align: center;
+ font-size: 0;
+ padding: 0;
+ display: inline-block;
+}
 
-      img {
-        border: 0;
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-        outline: none;
-      }
+.section {
+ position: relative;
+ text-align: left;
+ margin: 0;
+ margin: 0;
+ padding: 0;
+ max-width: 100%;
+ height: 100%;
+ min-height: 100%;
+ border-spacing: 0;
+ display: inline-block;
+ vertical-align: bottom;
+}
 
-      .content,
-      .content-holder {
-        max-width: 100%;
-        height: 100%;
-        min-height: 100%;
-        Margin: 0 auto;
-        margin: 0 auto;
-        padding: 0;
-      }
+.main {
+ width: 320px;
+ min-width: 320px;
+ max-width: 320px;
+ height: 500px;
+ max-height: 500px;
+ isolation: isolate;
+}
 
-      .add-ons {
-        max-width: 100%;
-        height: 100%;
-        min-height: 100%;
-        Margin: 0 auto;
-        margin: 0 auto;
-        padding: 0;
-        font-size: 15px;
-      }
+.mid {
+ width: 85px;
+ min-width: 85px;
+ max-width: 85px;
+}
 
-      .main-content {
-        margin: 0 auto;
-        margin: 0 auto;
-        max-width: 100%;
-        font-size: 16px;
-        mix-blend-mode: darken;
-      }
+.side {
+ margin-top: 160px;
+ min-width: 245px;
+ max-width: 245px;
+}
 
-      .blue-square,
-      .letter-head,
-      .letter-head-cover,
-      .flap,
-      .envelope {
-        padding: 0;
-        margin: 0;
-        margin: 0;
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: bottom right;
-        background-size: cover;
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-        z-index: -1;
-      }
+img {
+ border: 0;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ outline: none;
+}
 
-      .blue-square {
-        width: 62px;
-        height: 46px;
-        inset: -61px -64px auto auto;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/blue-square.png");
-      }
+.content,
+.content-holder {
+ max-width: 100%;
+ height: 100%;
+ min-height: 100%;
+ margin: 0;
+ margin: 0;
+ padding: 0;
+}
 
-      .letter-head {
-        position: absolute;
-        background-color: #ebebeb;
-        inset: -60px -55px;
-      }
+.add-ons {
+ max-width: 100%;
+ height: 100%;
+ min-height: 100%;
+ padding: 0;
+ font-size: 15px;
+}
 
-      .letter-head-cover {
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/A4-letter-head.png");
-        inset: -63px -77px -73px -65px;
-      }
+.main-content {
+ margin: 0 auto;
+ margin: 0 auto;
+ max-width: 100%;
+ font-size: 16px;
+ mix-blend-mode: darken;
+}
 
-      .flap,
-      .envelope {
-        inset: 0 -53% -75% -33%;
-        background-size: contain;
-      }
+.blue-square,
+.letter-head,
+.letter-head-cover,
+.flap,
+.envelope {
+ padding: 0;
+ margin: 0;
+ margin: 0;
+ position: absolute;
+ background-repeat: no-repeat;
+ background-position: bottom right;
+ background-size: contain;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ z-index: -1;
+}
 
-      .flap {
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/flap.png");
-      }
+.blue-square {
+ width: 76px;
+ height: 60px;
+ inset: -72px -65px auto auto;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/blue-square2.png");
+}
 
-      .envelope {
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/envelope.png");
-      }
+.letter-head {
+ position: absolute;
+ background-color: #ebebeb;
+ inset: -60px -55px;
+}
 
-      .brand {
-        max-width: 100%;
-        padding: 0;
-        margin: 0 auto;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px 0 20px;
-      }
+.letter-head-cover {
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/A4-letter-head2.png");
+ /* inset: -63px -77px -73px -65px; */
+ width: 452px;
+ height: 635px;
+ top: -62px;
+ left: -56px;
+}
 
-      .logo,
-      .company {
-        border-spacing: none;
-        padding: 0;
-        margin: 0;
-        margin: 0;
-        display: inline-block;
-        vertical-align: text-top;
-        text-align: left;
-      }
+.flap,
+.envelope {
+ /* inset: 0 -53% -75% -33%;
+ background-size: contain; */
+ width: 590px;
+ height: 510px;
+ bottom: -375px;
+ left: -100px;
+}
 
-      .company {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2em;
-        font-weight: bold;
-        line-height: 1.5;
-        letter-spacing: -1px;
-      }
+.flap {
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/flap2.png");
+}
 
-      .logo {
-        width: 1.5em;
-        height: 1.6em;
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: contain;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/logo.png");
-      }
+.envelope {
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/envelope2.png");
+}
 
-      .break {
-        width: 80%;
-      }
+.brand {
+ max-width: 100%;
+ padding: 0;
+ margin: 0 auto;
+ margin: 0 auto;
+ text-align: center;
+ padding: 5px 0 20px;
+}
 
-      .msg {
-        margin: 0;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        line-height: 1.5;
-        text-align: justify;
-        word-wrap: break-word;
-        hyphens: auto;
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-      }
+.logo,
+.company {
+ border-spacing: none;
+ padding: 0;
+ margin: 0;
+ margin: 0;
+ display: inline-block;
+ vertical-align: text-top;
+ text-align: left;
+}
 
-      .signature {
-        text-align: left;
-        font-size: 1em;
-      }
+.company {
+ font-size: 1.2em;
+ font-weight: bold;
+ line-height: 1.5;
+ letter-spacing: -1px;
+ font-family: system-ui;
+}
 
-      .zee {
-        line-height: 1.2;
-        font-weight: bold;
-      }
+.logo {
+ width: 24px;
+ height: 26px;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ background-repeat: no-repeat;
+ background-position: top center;
+ background-size: contain;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/logo.png");
+}
 
-      .actual-sig {
-        width: 45%;
-        height: 2em;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: contain;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/signature.png");
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-      }
+.break {
+ width: 80%;
+}
 
-      .add-ons-bg,
-      .pen,
-      .marker,
-      .pdf {
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: contain;
-        -ms-interpolation-mode: bicubic;
-        image-rendering: optimizeSpeed;
-      }
+.msg {
+ margin: 0;
+ margin: 0;
+ padding: 0;
+ max-width: 100%;
+ /* font-family: Arial, Helvetica, sans-serif; */
+ font-family: system-ui;
+ font-size: 1em;
+ line-height: 1.5;
+ text-align: justify;
+ word-wrap: break-word;
+ hyphens: auto;
+ -ms-hyphens: auto;
+ -moz-hyphens: auto;
+ -webkit-hyphens: auto;
+ z-index: 9;
+}
 
-      .pdf {
-        height: 50px;
-        width: 50px;
-        inset: -24px -14px auto auto;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/pdf.png");
-        mix-blend-mode: multiply;
-      }
+.signature {
+ text-align: left;
+ font-size: 1em;
+}
 
-      .marker {
-        inset: 100% 0 -32% 2%;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/marker.png");
-      }
+.zee {
+ line-height: 1.2;
+ font-weight: bold;
+}
 
-      .pen {
-        inset: 8% 0 2% -20%;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/pen.png");
-        z-index: 2;
-      }
+.actual-sig {
+ width: 135px;
+ height: 45px;
+ margin-left: 25px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/signature2.png");
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+}
 
-      .add-ons-bg {
-        inset: -46px -45px -80px -21px;
-        background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/notes.png");
-        z-index: 0;
-      }
+.add-ons-bg,
+.pen,
+.marker,
+.pdf {
+ position: absolute;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+}
 
-      .side-notes {
-        position: relative;
-        max-width: 100%;
-        height: 370px;
-        max-height: 370px;
-        min-height: 100%;
-        color: #2f3e56;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.67em;
-        line-height: 1.2;
-        text-align: left;
-        text-justify: inter-character;
-        word-wrap: break-word;
-        hyphens: auto;
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-      }
+.pdf {
+ /* inset: -6.2% -14% 91% 82.6%; */
+ width: 55px;
+ height: 55px;
+ inset: -24px -14px auto auto;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/pdf2.png");
+ mix-blend-mode: multiply;
+}
 
-      mark {
-        background-color: rgba(240, 240, 0, 0.4);
-        color: #2f3e56;
-        mix-blend-mode: multiply;
-      }
+.marker {
+ /* inset: 100% 0 -32% 2%; */
+ width: 230px;
+ height: 70px;
+ inset: auto auto -68px 18px;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/marker2.png");
+}
 
-      .heading {
-        max-width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.4em;
-        font-weight: bold;
-        line-height: 3;
-        text-align: left;
-        padding: 0 60px;
-        opacity: 0.9;
-      }
+.pen {
+ /* inset: 8% 0 2% -20%; */
+ width: 70px;
+ height: 315px;
+ inset: 20px auto auto -45px;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/pen2.png");
+ z-index: 2;
+}
 
-      .list {
-        max-width: 100%;
-        padding: 0 12px 0 16px;
-        font-size: 1em;
-        font-weight: bold;
-        line-height: 1.4;
-      }
+.add-ons-bg {
+ /* inset: -46px -45px -80px -21px; */
+ width: 310px;
+ height: 470px;
+ inset: -46.5px auto auto -20px;
+ background-image: url("https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/notes2.png");
+}
 
-      .subtext {
-        max-width: 100%;
-        display: inline-block;
-        padding: 0 14px 0 18px;
-        line-height: 1.2;
-        font-weight: normal;
-        font-size: 0.95em;
-      }
+.side-notes {
+ position:relative; 
+ max-width:100%; 
+ height:370px; 
+ max-height:370px; 
+ min-height:100%; 
+ color:#2f3e56; 
+ /* font-family:Arial,Helvetica,sans-serif; */ 
+ font-family: system-ui;
+ font-size:0.67em; 
+ line-height:1.2; 
+ text-align:left; 
+ text-justify:inter-character; 
+ word-wrap:break-word; 
+ hyphens:auto; 
+ -ms-hyphens:auto; 
+ -moz-hyphens:auto; 
+ -webkit-hyphens:auto;
+}
 
-      .example-holder,
-      .requirements {
-        max-width: 100%;
-        padding: 1px 0;
-        font-size: 1em;
-        mix-blend-mode: multiply;
-      }
+mark {
+ background-color: rgba(240, 240, 0, 0.4);
+ color: #2f3e56;
+ mix-blend-mode: multiply;
+}
 
-      .sample,
-      .label,
-      .detail {
-        max-width: 100%;
-        text-align: center;
-        display: block;
-      }
+.heading {
+ max-width: 100%;
+ font-size: 1.4em;
+ font-weight: bold;
+ line-height: 3;
+ text-align: left;
+ padding: 0 60px;
+ opacity: 0.9;
+}
 
-      .sample {
-        font-size: 1.15em;
-        font-weight: bold;
-        line-height: 1.8;
-      }
+.list {
+ max-width: 100%;
+ padding: 0 10px 0 16px;
+ font-size: 1em;
+ font-weight: bold;
+ line-height: 1.4;
+}
 
-      .label {
-        opacity: 0.8;
-        font-size: .9em;
-        line-height: 1;
-        letter-spacing: 1.6px;
-      }
+.subtext {
+ max-width: 100%;
+ display: inline-block;
+ padding: 0 10px 0 18px;
+ line-height: 1.2;
+ font-weight: normal;
+ font-size: 0.95em;
+}
 
-      .detail {
-        font-size: 1.1em;
-        text-align: left;
-        padding: 0 2px 0.5em 8px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="adjustment"></div>
-      <div class="adjustment2"></div>
-      <div class="wrapper-inner">
-        <div style="display: none !important; visibility: hidden; font-size: 0; color: #fff; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">{{subject}}</div>
-        <div style="display: none !important; visibility: hidden; font-size: 0; color: #fff; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;"> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌</div>
+.example-holder,
+.requirements {
+ max-width: 100%;
+ padding: 1px 0;
+ font-size: 1em;
+ mix-blend-mode: multiply;
+}
+
+.sample,
+.label,
+.detail {
+ max-width: 100%;
+ text-align: center;
+ display: block;
+}
+
+.sample {
+ font-size: 1.15em;
+ font-weight: bold;
+ line-height: 1.8;
+}
+
+.label {
+ opacity: 0.8;
+ font-size: .9em;
+ line-height: 1;
+ letter-spacing: 1.6px;
+}
+
+.detail {
+ font-size: 1.1em;
+ text-align: left;
+ padding: 0 2px 0.5em 8px;
+}
+
+.utilities {
+ font-size: 0;
+}
+
+</style>
+
+</head>
+
+<body  class="body">
+ <center  class="body">
+  <center  class="wrapper">
+   <div  class="adjustment utilities">&nbsp;</div>
+   <div  class="wrapper-inner">
+
+    <div style="display: none !important; visibility: hidden; font-size: 0; color: #fff; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">{{subject}}</div>
+    <div style="display: none !important; visibility: hidden; font-size: 0; color: #fff; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;"> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌</div>
+
+    <table class="main-table">
+     <tr>
+      <td class="three-column">
+       <div  class="section main">
+        <table width="100%">
+         <tr>
+          <td class="inner-td">
+           <table class="content">
+            <tr>
+             <td>
+              <div  class="content-holder">
+               <div  class="main-content">
+                <div  class="flap utilities">&nbsp;</div>
+                <div  class="letter-head utilities">&nbsp;</div>
+                <div  class="letter-head-cover utilities">&nbsp;</div>
+                <div  class="blue-square utilities">&nbsp;</div>
+                <div  class="envelope utilities">&nbsp;</div>
+
+                <div  class="brand" align="top">
+                 <div  class="logo"></div>
+                 <p class="company">Hilmarc's Construction Corporation</p>
+                </div>
+
+                <div  class="msg">
+                 <hr class="break">
+                 <br>
+                 <p>Dear <strong>Yawa</strong>, <br><br>This week we'll learn how to use HTML and CSS to create really awesome newsletters for our websites! We're going to use HTML tables in order to give the email layouts it's responsiveness and mobile-friendly version as well as have cross-email-client compatilibility. <br><br>Sincerely,<br><br></p>
+                 <div  class="signature-holder">
+                  <div  class="actual-sig utilities">&nbsp;</div>
+                  <p class="signature">
+                  <p class="zee">
+                   Jay Ar Adlaon Cimacio, RN<br>
+                   Occupational Health Nurse<br></p>
+                  <p class="lic">License number: 0847170</p>
+                  </p>
+                 </div>
+                </div>
+               </div>
+             </td><!--- End letter-head -->
+            </tr>
+           </table><!--- End content -->
+          </td><!--- End inner td -->
+         </tr>
         </table>
-        <!--- End Top Space-->
-        <table class="main-table">
-          <tr>
-            <td class="three-column">
-              <div class="section main">
-                <table width="100%">
-                  <tr>
-                    <td class="inner-td">
-                      <table class="content">
-                        <tr>
-                          <td>
-                            <div class="content-holder">
-                              <div class="main-content">
-                                <div class="flap"></div>
-                                <div class="letter-head"></div>
-                                <div class="letter-head-cover"></div>
-                                <div class="blue-square"></div>
-                                <div class="envelope"></div>
-                                <div class="brand" align="top">
-                                  <div class="logo"></div>
-                                  <p class="company">Hilmarc's Construction Corporation</p>
-                                </div>
-                                <div class="msg">
-                                  <hr class="break">
-                                  <br>
-                                  <p>Dear <strong>Yawa</strong>, <br>
-                                    <br>This week we'll learn how to use HTML and CSS to create really awesome newsletters for our websites! We're going to use HTML tables in order to give the email layouts it's responsiveness and mobile-friendly version as well as have cross-email-client compatilibility. <br>
-                                    <br>Sincerely, <br>
-                                    <br>
-                                  </p>
-                                  <div class="signature-holder">
-                                    <div class="actual-sig"></div>
-                                    <p class="signature">
-                                    <p class="zee"> Jay Ar Adlaon Cimacio, RN <br> Occupational Health Nurse <br>
-                                    </p>
-                                    <p class="lic">License number: 0847170</p>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                          </td>
-                          <!--- End letter-head -->
-                        </tr>
-                      </table>
-                      <!--- End content -->
-                    </td>
-                    <!--- End inner td -->
-                  </tr>
-                </table>
+       </div> <!--- End First section -->
+
+       <div  class="section mid">
+        <table width="100%">
+         <tr>
+          <td class="inner-td">
+           <table class="content">
+            <tr>
+             <td>
+              <div  class="content-holder utilities">&nbsp;
               </div>
-              <!--- End First section -->
-              <div class="section mid">
-                <table width="100%">
-                  <tr>
-                    <td class="inner-td">
-                      <table class="content">
-                        <tr>
-                          <td>
-                            <div class="content-holder"></div>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="section side">
-                <table width="100%">
-                  <tr>
-                    <td class="inner-td">
-                      <table class="content">
-                        <tr>
-                          <td>
-                            <div class="content-holder">
-                              <div class="add-ons">
-                                <div class="add-ons-bg"></div>
-                                <div class="side-notes">
-                                  <div class="pen"></div>
-                                  <div class="marker"></div>
-                                  <div class="pdf"></div>
-                                  <p class="heading"> Important Notes: </p>
-                                  <p class="example-holder">
-                                    <span class="detail"> 1. Please ensure that all requirements are submitted in a single, readable PDF file named in this format:</span>
-                                    <span class="sample">
-                                      <mark>&nbsp;&nbsp;Tamad, Juan A., Jr. - Laborer (HCC).pdf&nbsp;&nbsp;</mark>
-                                    </span>
-                                    <span class="label"> Full Name - Position (Company).pdf </span>
-                                  </p>
-                                  <p class="requirements">
-                                    <br>
-                                    <span class="detail"> 2. The following are the necessary pre-employment requirements:</span>
-                                  <p class="list"> • Up-to-date resume/biodata. <br> • Valid NBI/police clearance. <span class="subtext">
-                                      <mark>&nbsp;6 months for NBI, 3 months for police.&nbsp;</mark>
-                                    </span>
-                                    <br> • Legitimate drug test results. <br>
-                                    <span class="subtext">
-                                      <mark>&nbsp;Preferably from DOH with its seal/logo on the header with a minimum validity of 1 month.&nbsp;</mark>
-                                    </span> • Basic 5 medical test results. <br>
-                                    <span class="subtext">
-                                      <mark>&nbsp;CBC, urinalysis, fecalysis, chest x-ray, and ECG tracing for those over 35 years old with a minimum validity of 6 months.&nbsp;</mark>
-                                    </span> • Proof of full vaccination. <br>
-                                    <span class="subtext">
-                                      <mark>&nbsp;Card preferred but any valid proof subject to deliberation at POSCO.&nbsp;</mark>
-                                    </span> • Relevant certificates/licenses/documents.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
-                      <!--- End content -->
-                    </td>
-                    <!--- End inner td -->
-                  </tr>
-                </table>
-              </div>
-              <!--- End second section -->
-            </td>
-            <!--- End Two Column Section -->
-          </tr>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
         </table>
-        <!--- End Main Table -->
-      </div>
-      <!--- End Wrapper Inner -->
-    </div>
-    <!--- End Wrapper -->
-  </body>
+       </div>
+
+       <div  class="section side">
+        <table width="100%">
+         <tr>
+          <td class="inner-td">
+           <table class="content">
+            <tr>
+             <td>
+              <div  class="content-holder">
+               <div  class="add-ons">
+                <div  class="add-ons-bg utilities">&nbsp;</div>
+                <div  class="side-notes">
+                 <div  class="pen utilities">&nbsp;</div>
+                 <div  class="marker utilities">&nbsp;</div>
+                 <div  class="pdf utilities">&nbsp;</div>
+
+                 <p class="heading">
+                  Important Notes:
+                 </p>
+
+                 <p class="example-holder">
+
+                  <span class="detail">
+                   1. Please ensure that all requirements are submitted in a single, readable PDF file named in this format:</span>
+
+                  <span class="sample">
+
+                   <mark>&nbsp;&nbsp;Tamad, Juan A., Jr. - Laborer (HCC).pdf&nbsp;&nbsp;</mark></span>
+
+                  <span class="label">
+                   Full Name - Position (Company).pdf
+                  </span>
+                 </p>
+
+                 <p class="requirements">
+                  <br>
+                  <span class="detail">
+                   2. The following are the necessary pre-employment requirements:</span>
+
+                 <p class="list">
+
+                  • Up-to-date resume/biodata.
+                  <br>
+                  • Valid NBI/police clearance.
+                  <span class="subtext"><mark>&nbsp;6 months for NBI, 3 months for police.&nbsp;</mark></span><br>
+                  • Legitimate drug test results.
+                  <br>
+                  <span class="subtext">
+                   <mark>&nbsp;Preferably from DOH with its seal/logo on the header with a minimum validity of 1 month.&nbsp;</mark></span>
+
+                  • Basic 5 medical test results.
+                  <br>
+                  <span class="subtext"><mark>&nbsp;CBC, urinalysis, fecalysis, chest x-ray, and ECG tracing for those over 35 years old with a minimum validity of 6 months.&nbsp;</mark></span>
+
+                  • Proof of full vaccination.
+                  <br>
+                  <span class="subtext"><mark>&nbsp;Card preferred but any valid proof subject to deliberation at POSCO.&nbsp;</mark></span>
+
+                  • Relevant certificates/licenses/documents.
+                 </p>
+                </div>
+               </div>
+            </div>
+             </td>
+            </tr>
+           </table><!--- End content -->
+          </td><!--- End inner td -->
+         </tr>
+        </table>
+       </div> <!--- End second section -->
+      </td><!--- End Two Column Section -->
+     </tr>
+    </table> <!--- End Main Table -->
+   </div> <!--- End Wrapper Inner -->
+  </center> <!--- End Wrapper -->
+ </center>
+</body>
+
 </html>
