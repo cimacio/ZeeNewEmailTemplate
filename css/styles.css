@@ -21,7 +21,7 @@
  height: 100%;
  table-layout: fixed;
  background-repeat: no-repeat;
- background-position: 0;
+ background-position: cen;
  background-size: cover;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
@@ -192,11 +192,10 @@ img {
 }
 
 .blue-square {
- width: 86px;
+ width: 76px;
  height: 60px;
- inset: -60.5px -78.4px auto auto;
- background-image: url("/img/blue-square.png");
- mix-blend-mode: darken;
+ inset: -72px -65px auto auto;
+ background-image: url("/img/blue-square2.png");
 }
 
 .letter-head {
@@ -206,7 +205,7 @@ img {
 }
 
 .letter-head-cover {
- background-image: url("/img/A4-letter-head.png");
+ background-image: url("/img/A4-letter-head2.png");
  /* inset: -63px -77px -73px -65px; */
  width: 452px;
  height: 635px;
@@ -225,11 +224,11 @@ img {
 }
 
 .flap {
- background-image: url("/img/flap.png");
+ background-image: url("/img/flap2.png");
 }
 
 .envelope {
- background-image: url("/img/envelope.png");
+ background-image: url("/img/envelope2.png");
 }
 
 .brand {
@@ -253,7 +252,6 @@ img {
 }
 
 .company {
- font-family: Arial, Helvetica, sans-serif;
  font-size: 1.2em;
  font-weight: bold;
  line-height: 1.5;
@@ -280,7 +278,8 @@ img {
  margin: 0;
  padding: 0;
  max-width: 100%;
- font-family: Arial, Helvetica, sans-serif;
+ /* font-family: Arial, Helvetica, sans-serif; */
+ font-family: system-ui;
  font-size: 1em;
  line-height: 1.5;
  text-align: justify;
@@ -289,6 +288,7 @@ img {
  -ms-hyphens: auto;
  -moz-hyphens: auto;
  -webkit-hyphens: auto;
+ z-index: 9;
 }
 
 .signature {
@@ -303,12 +303,12 @@ img {
 
 .actual-sig {
  width: 135px;
- height: 40px;
+ height: 45px;
  margin-left: 25px;
  background-repeat: no-repeat;
  background-position: center;
- background-size: contain;
- background-image: url("/img/signature.png");
+ background-size: 100%;
+ background-image: url("/img/signature2.png");
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
 }
@@ -366,7 +366,8 @@ img {
  max-height:370px; 
  min-height:100%; 
  color:#2f3e56; 
- font-family:Arial,Helvetica,sans-serif; 
+ /* font-family:Arial,Helvetica,sans-serif; */ 
+ font-family: system-ui;
  font-size:0.67em; 
  line-height:1.2; 
  text-align:left; 
@@ -386,7 +387,6 @@ mark {
 
 .heading {
  max-width: 100%;
- font-family: Arial, Helvetica, sans-serif;
  font-size: 1.4em;
  font-weight: bold;
  line-height: 3;
