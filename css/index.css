@@ -134,7 +134,7 @@ a {
 .side {
  width: 280px;
  height: 400px;
- background-image: url("/img/side.png");
+ background-image: url("/img/side2.png");
  z-index: 1;
  outline: 1px solid green;
 }
@@ -143,7 +143,7 @@ a {
  position: absolute;
  inset: 0 -92px 0 -50px;
  height: 200%;
- background-image: url("/img/main.png");
+ background-image: url("/img/main2.png");
  background-repeat: no-repeat;
  background-position: top left;
  background-size: 100%;
