@@ -13,20 +13,35 @@ body {
  box-sizing: border-box;
 }
 
+.adjustment,
 .wrapper {
  width: 100%;
  height: 100%;
- table-layout: fixed;
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
- -ms-interpolation-mode: bicubic;
- image-rendering: optimizeSpeed;
- background-attachment: fixed;
- background-image: url("/img/bg2.png");
  Margin: 0;
  margin: 0;
  padding: 0;
+ border-spacing: 0;
+ table-layout: fixed;
+ background-repeat: repeat;
+ background-position: top left;
+ background-size: cover;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+}
+
+.adjustment {
+ position: absolute;
+ inset: 0;
+ background-image: url("/img/adjustment2.png");
+ mix-blend-mode: hard-light;
+ z-index: 2;
+}
+
+.wrapper {
+ position: relative;
+ background-image: url("/img/bg2.png");
+ overflow: hidden;
+ background-attachment: fixed;
  -webkit-text-size-adjust: 0;
  -ms-text-size-adjust: 0;
  -moz-text-size-adjust: 0;
@@ -34,6 +49,22 @@ body {
  -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  box-sizing: border-box;
+ isolation: isolate;
+}
+
+table,
+tr,
+td {
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ font-size: 0;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ border-spacing: 0;
+ table-layout: fixed;
 }
 
 p {
@@ -50,28 +81,26 @@ a {
 
 .main-table {
  width: 100%;
- height: 100%;
- max-width: 800px;
+ max-width: 600px;
  Margin: 0 auto;
  margin: 0 auto;
- padding: 0;
+ padding: 10px 0 0;
  border-spacing: 0;
- outline: 1px solid green;
 }
 
 .two-column {
  width: 100%;
  text-align: center;
  font-size: 0;
- padding: 0;
  border-spacing: 0;
  display: inline-block;
- Margin: 0;
- margin: 0;
+ Margin: 0 auto;
+ margin: 0 auto;
  padding: 0;
 }
 
 .section {
+ position: relative;
  width: 100%;
  text-align: left;
  Margin: 0 auto;
@@ -81,7 +110,7 @@ a {
  height: 100%;
  min-height: 100%;
  border-spacing: 0;
- vertical-align: top;
+ vertical-align: bottom;
  display: inline-block;
  background-repeat: no-repeat;
  background-position: bottom right;
@@ -91,29 +120,44 @@ a {
 }
 
 .content {
+ position: relative;
  max-width: 100%;
  height: 100%;
- min-height: 100%;
  border-spacing: 0;
 }
 
 .main {
- width: 520px;
- height: 850px;
- background-image: url("/img/main.png");
- outline: 1px solid red;
+ width: 320px;
+ height: 540px;
 }
 
 .side {
  width: 280px;
  height: 400px;
  background-image: url("/img/side.png");
- outline: 1px solid yellow;
+ z-index: 1;
+ outline: 1px solid green;
 }
 
-img {
- border: 0;
+.main-cover {
+ position: absolute;
+ inset: 0 -92px 0 -50px;
+ height: 200%;
+ background-image: url("/img/main.png");
+ background-repeat: no-repeat;
+ background-position: top left;
+ background-size: 100%;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
- outline: none;
+}
+
+.message {
+ Margin: 0;
+ margin: 0;
+ padding: 120px 20px 0;
+ max-width: 100%;
+ font-family: system-ui;
+ font-size: 12px;
+ line-height: 1.5;
+ text-align: left;
 }
