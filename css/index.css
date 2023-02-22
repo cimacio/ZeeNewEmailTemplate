@@ -130,7 +130,7 @@ a {
 .main-cover {
  position: absolute;
  inset: 0 -92px 0 -50px;
- height: 200%;
+ height: 150%;
  background-image: url("/img/main2.png");
  background-repeat: no-repeat;
  background-position: top left;
