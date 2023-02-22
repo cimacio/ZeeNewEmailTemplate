@@ -1,0 +1,119 @@
+body {
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ height: 100%;
+ -webkit-text-size-adjust: 0;
+ -ms-text-size-adjust: 0;
+ -moz-text-size-adjust: 0;
+ text-size-adjust: 0;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+.wrapper {
+ width: 100%;
+ height: 100%;
+ table-layout: fixed;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ background-attachment: fixed;
+ background-image: url("/img/bg2.png");
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ -webkit-text-size-adjust: 0;
+ -ms-text-size-adjust: 0;
+ -moz-text-size-adjust: 0;
+ text-size-adjust: 0;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+p {
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+ color: #2f3e56;
+}
+
+a {
+ color: #2f3e56;
+ text-decoration: none;
+}
+
+.main-table {
+ width: 100%;
+ height: 100%;
+ max-width: 800px;
+ Margin: 0 auto;
+ margin: 0 auto;
+ padding: 0;
+ border-spacing: 0;
+ outline: 1px solid green;
+}
+
+.two-column {
+ width: 100%;
+ text-align: center;
+ font-size: 0;
+ padding: 0;
+ border-spacing: 0;
+ display: inline-block;
+ Margin: 0;
+ margin: 0;
+ padding: 0;
+}
+
+.section {
+ width: 100%;
+ text-align: left;
+ Margin: 0 auto;
+ margin: 0 auto;
+ padding: 0;
+ max-width: 100%;
+ height: 100%;
+ min-height: 100%;
+ border-spacing: 0;
+ vertical-align: top;
+ display: inline-block;
+ background-repeat: no-repeat;
+ background-position: bottom right;
+ background-size: contain;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+}
+
+.content {
+ max-width: 100%;
+ height: 100%;
+ min-height: 100%;
+ border-spacing: 0;
+}
+
+.main {
+ width: 520px;
+ height: 850px;
+ background-image: url("/img/main.png");
+ outline: 1px solid red;
+}
+
+.side {
+ width: 280px;
+ height: 400px;
+ background-image: url("/img/side.png");
+ outline: 1px solid yellow;
+}
+
+img {
+ border: 0;
+ -ms-interpolation-mode: bicubic;
+ image-rendering: optimizeSpeed;
+ outline: none;
+}

@@ -1,4 +1,4 @@
-.body {
+﻿.body {
  Margin: 0;
  margin: 0;
  padding: 0;
@@ -21,7 +21,7 @@
  height: 100%;
  table-layout: fixed;
  background-repeat: no-repeat;
- background-position: cen;
+ background-position: center;
  background-size: cover;
  -ms-interpolation-mode: bicubic;
  image-rendering: optimizeSpeed;
