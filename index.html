@@ -35,15 +35,14 @@
              <div lang="en" style="display: block; clear: both; padding: 0 0 45px; margin:0 auto; width: 100%; min-width: 300px; max-width: 300px; font-family: sans-serif; font-size: 15px; line-height: 1.5; text-align: left; mix-blend-mode: darken; background: url('/img/top.png') no-repeat top 50px left; background-size: 200px; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;">
               <p style="width: 100%; margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ </p>
               <hr style="width: 80%; border: .5px solid #2f3e56; margin: 20px auto;">
-              <p style="margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;">{{choice 'Hello, Hi, Good day, Greetings, Hi there, Hello there, Dear'}}, <span style="font-weight: bold; color: #2f3e56; text-decoration: none;"> {{#if to.name}}
-                 <span style="text-transform: capitalize;">{{to.name}}</span>
-                {{else}}{{#if to.email}}<a style="text-transform: lowercase;color: #2f3e56; text-decoration: none;" href="#" alt="">{{to.email}}</a>{{else}}<span style="text-transform: capitalize;">ma'am/sir</span>{{/if}}{{/if}}!</span>
+              <p style="margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; -webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">{{choice 'Hello, Hi, Good day, Greetings, Hi there, Hello there, Dear'}}, <span style="font-weight: bold; color: #2f3e56; text-decoration: none;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">{{#if to.name}}<span style="text-transform: capitalize;">{{to.name}}</span>{{else}}{{#if to.email}}<a style="text-transform: lowercase;color: #2f3e56; text-decoration: none; pointer-events: none;" href="#" alt="">{{to.email}}</a>{{else}}<span style="text-transform: capitalize;">ma'am/sir</span>{{/if}}{{/if}}!</span>
                <br>
                <br>
+              </p>
                
-               {{{choice '
+              <p style="margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;">
                
-               I&nbsp;am delighted to inform you that the submitted medical requirements have been met and that the applicant(s) are deemed fit to work following the review of the documents you submitted.,
+               {{{choice 'I&nbsp;am delighted to inform you that the submitted medical requirements have been met and that the applicant(s) are deemed fit to work following the review of the documents you submitted.,
                
                I&nbsp;am pleased to confirm that the medical requirements have been met; hence it has been determined that the applicant(s) are fit to work based on the document(s) you submitted via email.,
                
@@ -55,9 +54,7 @@
                <br>
                <br>
                
-               {{{choice '
-               
-               Your thoroughness in producing quality manpower is greatly appreciated.,
+               {{{choice 'Your thoroughness in producing quality manpower is greatly appreciated.,
                
                Your diligence and commitment to meeting our standards is commendable.,
                
@@ -69,9 +66,7 @@
                <br>
                <br>
                
-               {{{choice '
-               
-               Please do not hesitate to contact me at your earliest convenience should you have any questions or concerns. Rest assured that I&nbsp;am dedicated to providing you with the necessary assistance to ensure a smooth and satisfying experience.,
+               {{{choice 'Please do not hesitate to contact me at your earliest convenience should you have any questions or concerns. Rest assured that I&nbsp;am dedicated to providing you with the necessary assistance to ensure a smooth and satisfying experience.,
                
                Please feel free to reach out to me with any questions or concerns you may have at your earliest convenience. My goal is to ensure that your experience with us is as seamless and enjoyable as possible.,
                
@@ -82,6 +77,7 @@
                Please reach out to me at your earliest convenience if you have any concerns or inquiries. I&nbsp;am committed to providing you with the necessary assistance to ensure that your experience with us is both seamless and enjoyable.'}}}
                
               </p>
+              
               <p style="max-width: 100%; margin: 0; padding: 20px 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; pointer-events: none;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">Sincerely,</p>
               <div style="margin: 0 auto; padding: 0; text-align: center; vertical-align: bottom; width: 100%; height: 30px; font-size: 0; background: url('/img/signature.png') no-repeat bottom left 25px; background-size: 120px; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;">‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ </div>
               <p style="font-weight: bold; line-height: 1; max-width: 100%; margin: 0; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; pointer-events: none;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">Jay Ar Adlaon Cimacio, RN</p>
