@@ -21,10 +21,10 @@
        <div style="margin: 0 auto; padding: 0; text-align: center; vertical-align: bottom; width: 100%; height: 700px; font-size: 0; background: url('/img/flap.png') no-repeat bottom center; background-size: 550px; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;">‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌</div>
       </td>
       <td style="margin: 0 auto; padding:0; width: 100%;  height:0; font-size: 0; box-sizing: border-box; border-spacing: 0; table-layout: fixed; vertical-align: bottom; text-align: center; display: block;">
-       <div style="margin: 0 auto; padding:0; width: 100%; height: 357px; font-size: 0; box-sizing: border-box; border-spacing: 0; table-layout: fixed; vertical-align: middle; text-align: center; display: block; overflow-x: hidden; overflow-y: scroll; scrollbar-width: none;">
+       <div style="margin: 0 auto; padding:0; width: 100%; height: 357px; font-size: 0; box-sizing: border-box; border-spacing: 0; table-layout: fixed; vertical-align: middle; text-align: center; display: block; overflow-x: hidden; overflow-y: scroll; scrollbar-width: none; scroll-behavior: smooth; overscroll-behavior: none; scroll-snap-type: y mandatory;">
         <div style="margin: 125px auto 0; padding: 0; text-align: center; vertical-align: text-top; width: 100%; opacity: .25;">
-          <p style="vertical-align: middle; word-spacing: 5px; letter-spacing: 2px; font-family: sans-serif; font-size: 18px; margin: 0 auto; -webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; mix-blend-mode: darken;display:inline-block;">Scroll to view message</p>
-           <img src="/img/scroll.gif" alt="" width="35px" height="35px" style="vertical-align: middle; width: 35px; height: 35px; display:inline: block;-ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;margin: 0 auto 0 10px; padding: 0; border: none;">
+         <p style="vertical-align: middle; word-spacing: 5px; letter-spacing: 2px; font-family: sans-serif; font-size: 18px; margin: 0 auto; -webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; mix-blend-mode: darken;display:inline-block;">Scroll to view message</p>
+         <img src="/img/scroll.gif" alt="" width="35px" height="35px" style="vertical-align: middle; width: 35px; height: 35px; display:inline: block;-ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;margin: 0 auto 0 10px; padding: 0; border: none;">
         </div>
         <center style="width: 100%; min-height: 450px; margin: 20px auto 0; padding: 0; border-spacing: 0; vertical-align: bottom; background-image: url('/img/blue-square.png'), url('/img/bottom.png'), url('/img/piece.png'); background-repeat: no-repeat, no-repeat, repeat-y; background-position: top center, bottom center, center; background-size: 420px, 420px 120px, 420px; background-blend-mode: multiply; text-align: center; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;">
 
@@ -35,16 +35,52 @@
              <div lang="en" style="display: block; clear: both; padding: 0 0 45px; margin:0 auto; width: 100%; min-width: 300px; max-width: 300px; font-family: sans-serif; font-size: 15px; line-height: 1.5; text-align: left; mix-blend-mode: darken; background: url('/img/top.png') no-repeat top 50px left; background-size: 200px; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;">
               <p style="width: 100%; margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ <br>‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ </p>
               <hr style="width: 80%; border: .5px solid #2f3e56; margin: 20px auto;">
-              <p style="width: 100%; margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;">{{choice 'Hello, Hi, Good day, Greetings, Hi there, Hello there, Dear'}}, <span style="font-weight: bold; color: #2f3e56; text-decoration: none;"> {{#if to.name}}
+              <p style="margin: 0 auto; padding: 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision;">{{choice 'Hello, Hi, Good day, Greetings, Hi there, Hello there, Dear'}}, <span style="font-weight: bold; color: #2f3e56; text-decoration: none;"> {{#if to.name}}
                  <span style="text-transform: capitalize;">{{to.name}}</span>
-                {{else}}{{#if to.email}}
-                  <a style="text-transform: lowercase;color: #2f3e56; text-decoration: none;">{{to.email}}</a>
-                 {{else}}
-                  <span style="text-transform: capitalize;">ma'am/sir</span>{{/if}}{{/if}}! </span>
+                {{else}}{{#if to.email}}<a style="text-transform: lowercase;color: #2f3e56; text-decoration: none;" href="#" alt="">{{to.email}}</a>{{else}}<span style="text-transform: capitalize;">ma'am/sir</span>{{/if}}{{/if}}!</span>
                <br>
-               <br>{{{choice 'I&nbsp;have examined the medical reports submitted by the applicants. I&nbsp;am happy to report that all medical requirements have been fulfilled., I&nbsp;have conducted a thorough review of the medical reports submitted by the applicants. I&nbsp;am delighted to confirm that all medical requirements have been met., I&nbsp;have carefully examined the medical reports submitted by the applicants. I&nbsp;am glad to inform you that all medical requirements have been completed., I&nbsp;have reviewed the medical reports submitted by the applicants. I&nbsp;am happy to confirm that all medical requirements have been fulfilled., I&nbsp;have thoroughly reviewed the submitted medical reports of the applicants. I&nbsp;am pleased to inform you that all medical requirements have been completed., I&nbsp;am writing to confirm that the medical report requirements for the submitted documents have been reviewed and found to be complete.'}}} <br>
-               <br>{{{choice 'Thank you for taking the time to gather and submit the necessary documents promptly. We appreciate your cooperation in ensuring a smooth and efficient hiring process., Thank you for providing complete and accurate medical reports. In which will help us determine the eligibility of each applicant for employment or deployment., Your cooperation and promptness in providing complete medical reports have been greatly appreciated. This will ensure a smooth and efficient hiring process., Thank you for your effort and attention to detail in ensuring that the medical reports submitted are complete and accurate. This will help us assess the eligibility of each applicant and ensure their safety and wellbeing when employed or deployed., I&nbsp;appreciate your assistance in ensuring that complete and accurate medical reports are provided. This will help us make informed decisions regarding the eligibility of each applicant for employment or deployment., Thank you for your attention to detail in providing complete and accurate medical reports. This will enable us to make well-informed decisions regarding the suitability of each applicant for employment or deployment.'}}} <br>
-               <br>Should any additional questions or concerns arise, please feel free to contact me at your earliest convenience. It would be my absolute pleasure to provide you with any assistance you may require, and I&nbsp;am committed to ensuring that your experience with us is as smooth and satisfactory as possible.
+               <br>
+               
+               {{{choice '
+               
+               I&nbsp;am delighted to inform you that the submitted medical requirements have been met and that the applicant(s) are deemed fit to work following the review of the documents you submitted.,
+               
+               I&nbsp;am pleased to confirm that the medical requirements have been met; hence it has been determined that the applicant(s) are fit to work based on the document(s) you submitted via email.,
+               
+               After a thorough review of the submitted medical requirements, I&nbsp;am pleased to confirm that the necessary documents have been considered as fulfilled. This indicates that the applicant(s) are fit to work.,
+               
+               The medical prerequisites have been fulfilled; the applicant(s) are considered fit to work based on a thorough review of the documents you submitted via email.,
+               
+               Your submission of the medical requirements has been meticulously reviewed and I&nbsp;am pleased to confirm that the necessary documents have been met.'}}}
+               <br>
+               <br>
+               
+               {{{choice '
+               
+               Your thoroughness in producing quality manpower is greatly appreciated.,
+               
+               Your diligence and commitment to meeting our standards is commendable.,
+               
+               Your commitment to excellence is commendable.,
+               
+               We appreciate your dedication in producing quality manpower and look forward to welcoming them onboard.,
+               
+               Your thoroughness and dedication to meeting our standards is greatly appreciated.'}}}
+               <br>
+               <br>
+               
+               {{{choice '
+               
+               Please do not hesitate to contact me at your earliest convenience should you have any questions or concerns. Rest assured that I&nbsp;am dedicated to providing you with the necessary assistance to ensure a smooth and satisfying experience.,
+               
+               Please feel free to reach out to me with any questions or concerns you may have at your earliest convenience. My goal is to ensure that your experience with us is as seamless and enjoyable as possible.,
+               
+               Please feel free to contact me at your earliest convenience if any questions or concerns arise. I am here to provide you with any assistance you may require, and I&nbsp;am committed to making your experience with us as pleasant and satisfying as possible.,
+               
+               Do not hesitate to contact me at your earliest convenience if you have any questions or concerns. I&nbsp;will be more than happy to provide you with the necessary assistance to ensure a smooth and satisfactory experience.,
+               
+               Please reach out to me at your earliest convenience if you have any concerns or inquiries. I&nbsp;am committed to providing you with the necessary assistance to ensure that your experience with us is both seamless and enjoyable.'}}}
+               
               </p>
               <p style="max-width: 100%; margin: 0; padding: 20px 0; color: #2f3e56; word-wrap: break-word; overflow-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; font-smooth: always; font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; pointer-events: none;-webkit-touch-callout: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -ms-user-select: none;">Sincerely,</p>
               <div style="margin: 0 auto; padding: 0; text-align: center; vertical-align: bottom; width: 100%; height: 30px; font-size: 0; background: url('/img/signature.png') no-repeat bottom left 25px; background-size: 120px; -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality;">‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ </div>
