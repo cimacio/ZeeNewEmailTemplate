@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en" xml:lang="en">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+ <meta name="format-detection" content="telephone=no">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+ <style>
+  @import url(https://fonts.googleapis.com/css?family=Cabin);
+
+  body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vmax;
+   background-image: url('/img/background.png');
+   background-position: center;
+   background-size: 50%;
+   -ms-interpolation-mode: bicubic;
+   image-rendering: high-quality;
+   background-color: transparent;
+  }
+
+  p {
+   display: inline-block;
+   margin-top: 20vmax;
+   font-size: 10vmax;
+   font-family: "Cabin", sans-serif;
+   letter-spacing: 12px;
+   text-indent: 12px;
+   color: #fbfbfb;
+   translateZ(0.0001px);
+   will-change: transform;
+   text-shadow: 3vmax 3vmax 5vmax #000;
+   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+   font-smooth: always;
+   font-smoothing: antialiased;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: geometricPrecision;
+  }
+
+  .mouse2 {
+   position: absolute;
+   top: 10%;
+   width: 30vmax;
+   height: 50vmax;
+   border-radius: 50vmax;
+   box-shadow: 5vmax 5vmax 10vmax 0 rgba(0, 0, 0, 0.65);
+   will-change: transform, opacity;
+   opacity: 0;
+   animation: nudgeMouse2 5s ease-out infinite;
+  }
+
+  .mouse {
+   background-color:  #4e5559;
+   background-image: linear-gradient(transparent 0%, transparent 50%, #fbfbfb 50%, #fbfbfb 100%);
+   background-color: white;
+   position: relative;
+   width: 30vmax;
+   height: 50vmax;
+   border-radius: 100vmax;
+   background-size: 100% 200%;
+   -ms-interpolation-mode: bicubic;
+   image-rendering: high-quality;
+   translateZ(0.0001px);
+   will-change: transform;
+   contain: paint;
+   box-shadow: .5vmax .5vmax 1vmax 0 rgba(0, 0, 0, 0.65);
+   animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+  }
+
+  .mouse:before,
+  .mouse:after {
+   content: "";
+   contain: strict;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   margin: auto;
+   -ms-interpolation-mode: bicubic;
+   image-rendering: high-quality;
+  }
+
+  .mouse:before {
+   width: 25vmax;
+   height: 45vmax;
+   background: rgb(2, 0, 36);
+   background: linear-gradient(162deg, rgba(2, 0, 36, 1) 0%, rgba(47, 62, 86, 1) 75%, rgba(78, 85, 89, 1) 100%);
+   border-radius: 50vmax;
+  }
+
+  .mouse:after {
+   background-color: #fbfbfb;
+   width: 8vmax;
+   height: 8vmax;
+   border-radius: 50vmax;
+   translateZ(0.0001px);
+   will-change: transform, opacity;
+   animation: trackBallSlide 5s linear infinite;
+  }
+  
+    @keyframes nudgeMouse2 {
+     0% {
+      transform: translateY(0);
+      opacity: 1;
+     }
+  
+     20% {
+      transform: translateY(4vmax);
+      opacity: 0;
+     }
+  
+     30% {
+      transform: translateY(0);
+      opacity: 1;
+     }
+  
+     50% {
+      transform: translateY(4vmax);
+      opacity: 0;
+     }
+  
+     60% {
+      transform: translateY(0);
+      opacity: 1;
+     }
+  
+     80% {
+      transform: translateY(4vmax);
+      opacity: 0;
+     }
+  
+     90%,
+     100% {
+      transform: translateY(0);
+      opacity: 1;
+     }
+    }
+
+  @keyframes nudgeMouse {
+   0% {
+    transform: translateY(0);
+   }
+
+   20% {
+    transform: translateY(4vmax);
+   }
+
+   30% {
+    transform: translateY(0);
+   }
+
+   50% {
+    transform: translateY(4vmax);
+   }
+
+   60% {
+    transform: translateY(0);
+   }
+
+   80% {
+    transform: translateY(4vmax);
+   }
+
+   90% {
+    transform: translateY(0);
+   }
+  }
+
+  @keyframes colorSlide {
+
+   0% {
+    background-position: 0% 100%;
+   }
+
+   20% {
+    background-position: 0% 0%;
+   }
+
+   21% {
+    background-color: #4e5559;
+   }
+
+   29.99% {
+    background-color: #fbfbfb;
+    background-position: 0% 0%;
+   }
+
+   30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+   }
+
+   50% {
+    background-position: 0% 0%;
+   }
+
+   51% {
+    background-color: #4e5559;
+   }
+
+   59.99% {
+    background-color: #fbfbfb;
+    background-position: 0% 0%;
+   }
+
+   60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+   }
+
+   80% {
+    background-position: 0% 0%;
+   }
+
+   81% {
+    background-color: #4e5559;
+   }
+   
+   90%, 
+   100% {
+    background-color: #fbfbfb;
+   }
+  }
+
+  @keyframes trackBallSlide {
+   0% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+
+   6% {
+    opacity: 1;
+    transform: scale(0.9) translateY(2vmax);
+   }
+
+   14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(30vmax);
+   }
+
+   15%,
+   19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10vmax);
+   }
+
+   28%,
+   29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+
+   30% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+
+   36% {
+    opacity: 1;
+    transform: scale(0.9) translateY(2vmax);
+   }
+
+   44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(30vmax);
+   }
+
+   45%,
+   49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10vmax);
+   }
+
+   58%,
+   59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+
+   60% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+
+   66% {
+    opacity: 1;
+    transform: scale(0.9) translateY(2vmax);
+   }
+
+   74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(30vmax);
+   }
+
+   75%,
+   79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-10vmax);
+   }
+
+   88%,
+   100% {
+    opacity: 1;
+    transform: scale(1) translateY(-10vmax);
+   }
+  }
+
+  @keyframes nudgeText {
+   0% {
+    transform: translateY(0);
+   }
+
+   20% {
+    transform: translateY(1.5vmax);
+   }
+
+   30% {
+    transform: translateY(0);
+   }
+
+   50% {
+    transform: translateY(1.5vmax);
+   }
+
+   60% {
+    transform: translateY(0);
+   }
+
+   80% {
+    transform: translateY(1.5vmax);
+   }
+
+   90% {
+    transform: translateY(0);
+   }
+  }
+
+  @keyframes colorText {
+   21% {
+    color: #4e5559;
+    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+   }
+
+   30% {
+    color: #fbfbfb;
+    text-shadow: 3vmax 3vmax 5vmax #000;
+   }
+
+   51% {
+    color: #4e5559;
+    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+   }
+
+   60% {
+    color: #fbfbfb;
+    text-shadow: 3vmax 3vmax 5vmax #000;
+   }
+
+   81% {
+    color: #4e5559;
+    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+   }
+
+   90% {
+    color: #fbfbfb;
+    text-shadow: 3vmax 3vmax 5vmax #000;
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <div class="mouse2"></div>
+ <div class="mouse"></div>
+ <p>Scroll</p>
+</body>
+
+</html>
