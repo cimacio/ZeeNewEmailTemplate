@@ -5,18 +5,19 @@
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
- <meta name="format-detection" content="telephone=no">
+
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
  <style>
-  @import url(https://fonts.googleapis.com/css?family=Cabin);
-
+ 
   body {
    position: relative;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: 100vmax;
+   font-size: 10vmin;
+   font-family: Helvetica, Arial, sans-serif;
+   height: 100vmin;
    background-image: url('/img/background.png');
    background-position: center;
    background-size: 50%;
@@ -24,19 +25,26 @@
    image-rendering: high-quality;
    background-color: transparent;
   }
+  
+  .adjustment {
+   mix-blend-mode: darken;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-image: url('/img/piece.png');
+   background-position: top center;
+   background-size: 150% 100%%;
+   animation: nudgeMouse 5s ease-out infinite;
+   translateZ(0.0001px);
+  }
 
   p {
-   display: inline-block;
-   margin-top: 20vmax;
-   font-size: 10vmax;
-   font-family: "Cabin", sans-serif;
-   letter-spacing: 12px;
-   text-indent: 12px;
+   display: relative;
+   opacity: 1;
    color: #fbfbfb;
+   letter-spacing: 2vmin;
+   text-indent: 2vmin;
    translateZ(0.0001px);
-   will-change: transform;
-   text-shadow: 3vmax 3vmax 5vmax #000;
-   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
    font-smooth: always;
    font-smoothing: antialiased;
    -webkit-font-smoothing: antialiased;
@@ -44,105 +52,107 @@
    text-rendering: geometricPrecision;
   }
 
-  .mouse2 {
-   position: absolute;
-   top: 10%;
-   width: 30vmax;
-   height: 50vmax;
-   border-radius: 50vmax;
-   box-shadow: 5vmax 5vmax 10vmax 0 rgba(0, 0, 0, 0.65);
-   will-change: transform, opacity;
-   opacity: 0;
-   animation: nudgeMouse2 5s ease-out infinite;
+  .scroll1 {
+   margin-top: -10vmin;
+   text-shadow: 1vmin 1vmin 2vmin #000;
+   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
   }
 
-  .mouse {
-   background-color:  #4e5559;
-   background-image: linear-gradient(transparent 0%, transparent 50%, #fbfbfb 50%, #fbfbfb 100%);
-   background-color: white;
-   position: relative;
-   width: 30vmax;
-   height: 50vmax;
-   border-radius: 100vmax;
+  .scroll2 {
+   margin-top: 10vmin;
+   text-shadow: .5vmin .5vmin 1vmin #000;
+   mix-blend-mode: color-burn;
+   animation: nudgeText 5s ease-out infinite;
+  }
+
+  div {
+   width: 30vmin;
+   height: 50vmin;
+   background-image: linear-gradient(transparent 0%, transparent 45%, #fbfbfb 50%, #fbfbfb 100%);
+   border-radius: 80vmin;
    background-size: 100% 200%;
+   background-position: 0% 100%;
    -ms-interpolation-mode: bicubic;
    image-rendering: high-quality;
    translateZ(0.0001px);
-   will-change: transform;
-   contain: paint;
-   box-shadow: .5vmax .5vmax 1vmax 0 rgba(0, 0, 0, 0.65);
+   will-change: transform, opacity;
+   opacity: 1;
+  }
+
+  .mouse2 {
+   position: absolute;
+   top: 15%;
+   box-shadow: 2vmin 2vmin 3vmin 0 rgba(0, 0, 0, 0.85);
+   animation: mouseopa 5s ease-out infinite, nudgeMouse 5s ease-out infinite;
+  }
+
+  .mouse1 {
+   position: relative;
+   box-shadow: .5vmin .5vmin 1vmin 0 rgba(0, 0, 0, 0.85);
    animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
   }
 
-  .mouse:before,
-  .mouse:after {
+  .mouse1:before,
+  .mouse1:after {
    content: "";
    contain: strict;
    position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
+   inset: 0;
    margin: auto;
    -ms-interpolation-mode: bicubic;
    image-rendering: high-quality;
   }
 
-  .mouse:before {
-   width: 25vmax;
-   height: 45vmax;
+  .mouse1:before {
+   width: 25vmin;
+   height: 45vmin;
    background: rgb(2, 0, 36);
-   background: linear-gradient(162deg, rgba(2, 0, 36, 1) 0%, rgba(47, 62, 86, 1) 75%, rgba(78, 85, 89, 1) 100%);
-   border-radius: 50vmax;
+   background-image: linear-gradient(180deg, rgba(2, 0, 36, .6) 0%, rgba(47, 62, 86, .8) 45%, rgba(78, 85, 89, .8) 100%);
+   border-radius: 50vmin;
+   background-size: 100% 240%;
+   background-position: 0% 100%;
+   animation: colorSlide 5s linear infinite;
   }
 
-  .mouse:after {
+  .mouse1:after {
    background-color: #fbfbfb;
-   width: 8vmax;
-   height: 8vmax;
-   border-radius: 50vmax;
+   width: 8vmin;
+   height: 8vmin;
+   box-shadow: 0 1vmin 1vmin 0 rgba(0, 0, 0, 0.45);
+   border-radius: 50vmin;
    translateZ(0.0001px);
-   will-change: transform, opacity;
    animation: trackBallSlide 5s linear infinite;
   }
-  
-    @keyframes nudgeMouse2 {
-     0% {
-      transform: translateY(0);
-      opacity: 1;
-     }
-  
-     20% {
-      transform: translateY(4vmax);
-      opacity: 0;
-     }
-  
-     30% {
-      transform: translateY(0);
-      opacity: 1;
-     }
-  
-     50% {
-      transform: translateY(4vmax);
-      opacity: 0;
-     }
-  
-     60% {
-      transform: translateY(0);
-      opacity: 1;
-     }
-  
-     80% {
-      transform: translateY(4vmax);
-      opacity: 0;
-     }
-  
-     90%,
-     100% {
-      transform: translateY(0);
-      opacity: 1;
-     }
-    }
+
+  @keyframes mouseopa {
+   0% {
+    opacity: 1;
+   }
+
+   20% {
+    opacity: 0;
+   }
+
+   30% {
+    opacity: 1;
+   }
+
+   50% {
+    opacity: 0;
+   }
+
+   60% {
+    opacity: 1;
+   }
+
+   80% {
+    opacity: 0;
+   }
+
+   90%{
+    opacity: 1;
+   }
+  }
 
   @keyframes nudgeMouse {
    0% {
@@ -150,7 +160,7 @@
    }
 
    20% {
-    transform: translateY(4vmax);
+    transform: translateY(4vmin);
    }
 
    30% {
@@ -158,7 +168,7 @@
    }
 
    50% {
-    transform: translateY(4vmax);
+    transform: translateY(4vmin);
    }
 
    60% {
@@ -166,7 +176,7 @@
    }
 
    80% {
-    transform: translateY(4vmax);
+    transform: translateY(4vmin);
    }
 
    90% {
@@ -184,17 +194,7 @@
     background-position: 0% 0%;
    }
 
-   21% {
-    background-color: #4e5559;
-   }
-
-   29.99% {
-    background-color: #fbfbfb;
-    background-position: 0% 0%;
-   }
-
    30% {
-    background-color: #4e5559;
     background-position: 0% 100%;
    }
 
@@ -202,114 +202,95 @@
     background-position: 0% 0%;
    }
 
-   51% {
-    background-color: #4e5559;
-   }
-
-   59.99% {
-    background-color: #fbfbfb;
-    background-position: 0% 0%;
-   }
-
    60% {
-    background-color: #4e5559;
     background-position: 0% 100%;
    }
 
    80% {
     background-position: 0% 0%;
    }
-
-   81% {
-    background-color: #4e5559;
-   }
-   
-   90%, 
-   100% {
-    background-color: #fbfbfb;
-   }
   }
 
   @keyframes trackBallSlide {
    0% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
 
    6% {
     opacity: 1;
-    transform: scale(0.9) translateY(2vmax);
+    transform: scale(0.9) translateY(2vmin);
    }
 
    14% {
     opacity: 0;
-    transform: scale(0.4) translateY(30vmax);
+    transform: scale(0.4) translateY(30vmin);
    }
 
    15%,
    19% {
     opacity: 0;
-    transform: scale(0.4) translateY(-10vmax);
+    transform: scale(0.4) translateY(-10vmin);
    }
 
    28%,
    29.99% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
 
    30% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
 
    36% {
     opacity: 1;
-    transform: scale(0.9) translateY(2vmax);
+    transform: scale(0.9) translateY(2vmin);
    }
 
    44% {
     opacity: 0;
-    transform: scale(0.4) translateY(30vmax);
+    transform: scale(0.4) translateY(30vmin);
    }
 
    45%,
    49% {
     opacity: 0;
-    transform: scale(0.4) translateY(-10vmax);
+    transform: scale(0.4) translateY(-10vmin);
    }
 
    58%,
    59.99% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
 
    60% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
 
    66% {
     opacity: 1;
-    transform: scale(0.9) translateY(2vmax);
+    transform: scale(0.9) translateY(2vmin);
    }
 
    74% {
     opacity: 0;
-    transform: scale(0.4) translateY(30vmax);
+    transform: scale(0.4) translateY(30vmin);
    }
 
    75%,
    79% {
     opacity: 0;
-    transform: scale(0.4) translateY(-10vmax);
+    transform: scale(0.4) translateY(-10vmin);
    }
 
    88%,
    100% {
     opacity: 1;
-    transform: scale(1) translateY(-10vmax);
+    transform: scale(1) translateY(-10vmin);
    }
   }
 
@@ -319,7 +300,7 @@
    }
 
    20% {
-    transform: translateY(1.5vmax);
+    transform: translateY(1.5vmin);
    }
 
    30% {
@@ -327,7 +308,7 @@
    }
 
    50% {
-    transform: translateY(1.5vmax);
+    transform: translateY(1.5vmin);
    }
 
    60% {
@@ -335,7 +316,7 @@
    }
 
    80% {
-    transform: translateY(1.5vmax);
+    transform: translateY(1.5vmin);
    }
 
    90% {
@@ -345,33 +326,27 @@
 
   @keyframes colorText {
    21% {
-    color: #4e5559;
-    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+    opacity: 0;
    }
 
    30% {
-    color: #fbfbfb;
-    text-shadow: 3vmax 3vmax 5vmax #000;
+    opacity: 1;
    }
 
    51% {
-    color: #4e5559;
-    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+    opacity: 0;
    }
 
    60% {
-    color: #fbfbfb;
-    text-shadow: 3vmax 3vmax 5vmax #000;
+    opacity: 1;
    }
 
    81% {
-    color: #4e5559;
-    text-shadow: .1vmax .1vmax 2vmax #2f3e56;
+    opacity: 0;
    }
 
    90% {
-    color: #fbfbfb;
-    text-shadow: 3vmax 3vmax 5vmax #000;
+    opacity: 1;
    }
   }
  </style>
@@ -379,8 +354,10 @@
 
 <body>
  <div class="mouse2"></div>
- <div class="mouse"></div>
- <p>Scroll</p>
+ <div class="mouse1"></div>
+ <p class="scroll2">Scroll</p>
+ <p class="scroll1">Scroll</p>
+ <section class="adjustment"></section>
 </body>
 
 </html>
