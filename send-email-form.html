@@ -6,37 +6,32 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
-      function loadHtmlFile(url) {
-       return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.responseType = "document";
-        xhr.onload = function () {
-         if (xhr.status === 200) {
-          resolve(xhr.response);
-         } else {
-          reject("Error loading HTML file");
-         }
-        };
-        xhr.onerror = function () {
-         reject("Network error while loading HTML file");
-        };
-        xhr.send();
-       });
+   function sendEmail() {
+    // Load the external HTML file
+    const url = "index.html";
+    fetch(url)
+     .then((response) => {
+      if (response.ok) {
+       return response.text();
+      } else {
+       throw new Error("Error loading HTML file");
       }
-
-      function sendEmail() {
-     loadHtmlFile("email-template.html").then(function(htmlDoc) {
-       Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "yawapisting7@gmail.com",
-        Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-        To: "cimaciojay0@gmail.com",
-        From: "yawapisting7@gmail.com",
-        Subject: "Sending Email using javascript",
-        Body: htmlDoc.documentElement.innerHTML,
-       }).then((message) => alert(message));
-       });
+     })
+     .then((htmlBody) => {
+      // Send the email using SMTP.js
+      Email.send({
+       Host: "smtp.elasticemail.com",
+       Username: "yawapisting7@gmail.com",
+       Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
+       To: "cimaciojay0@gmail.com",
+       From: "yawapisting7@gmail.com",
+       Subject: "My Email Subject",
+       Body: htmlBody,
+      }).then((message) => alert(message));
+     })
+     .catch((error) => {
+      console.error(error);
+     });
    }
   </script>
  </head>
@@ -46,32 +41,3 @@
   </form>
  </body>
 </html>
-
-
-function sendEmail() {
-  // Load the external HTML file
-  const url = "index.html";
-  fetch(url)
-    .then((response) => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error("Error loading HTML file");
-      }
-    })
-    .then((htmlBody) => {
-      // Send the email using SMTP.js
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "your-email@gmail.com",
-        Password: "your-password",
-        To: "recipient-email@example.com",
-        From: "your-email@gmail.com",
-        Subject: "My Email Subject",
-        Body: htmlBody,
-      }).then((message) => alert(message));
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
