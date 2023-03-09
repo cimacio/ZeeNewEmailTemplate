@@ -8,7 +8,9 @@
 
   <script type="text/javascript">
     function sendEmail() {
-     
+      const url = "index.html";
+      const code = webread(url);
+      tree = htmlTree(code);
      Email.send({
       Host: "smtp.elasticemail.com",
       Username: "yawapisting7@gmail.com",
