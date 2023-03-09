@@ -6,51 +6,38 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
-   function loadHtmlFile(url) {
-    return new Promise(function (resolve, reject) {
-     var xhr = new XMLHttpRequest();
-     xhr.open("GET", url, true);
-     xhr.responseType = "document";
-     xhr.onload = function () {
-      if (xhr.status === 200) {
-       resolve(xhr.response);
-      } else {
-       reject("Error loading HTML file");
+      function loadHtmlFile(url) {
+       return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "document";
+        xhr.onload = function () {
+         if (xhr.status === 200) {
+          resolve(xhr.response);
+         } else {
+          reject("Error loading HTML file");
+         }
+        };
+        xhr.onerror = function () {
+         reject("Network error while loading HTML file");
+        };
+        xhr.send();
+       });
       }
-     };
-     xhr.onerror = function () {
-      reject("Network error while loading HTML file");
-     };
-     xhr.send();
-    });
-   }
-   
-   function sendEmail() {
-  loadHtmlFile("email-template.html").then(function(htmlDoc) {
-    Email.send({
-     Host: "smtp.elasticemail.com",
-     Username: "yawapisting7@gmail.com",
-     Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-     To: "cimaciojay0@gmail.com",
-     From: "yawapisting7@gmail.com",
-     Subject: "Sending Email using javascript",
-     Body: htmlDoc.documentElement.innerHTML,
-    }).then(function(message) {
-      console.log(message);
-    });
-  });
-}
 
-   function sendEmail() {
-loadHtmlFile("index.html").then(function(htmlDoc) { Email.send({ 
-     Host: "smtp.elasticemail.com",
-     Username: "yawapisting7@gmail.com",
-     Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-     To: "cimaciojay0@gmail.com",
-     From: "yawapisting7@gmail.com",
-     Subject: "Sending Email using javascript",
-     Body: htmlDoc.documentElement.innerHTML,
-    }).then((message) => alert(message));
+      function sendEmail() {
+     loadHtmlFile("email-template.html").then(function(htmlDoc) {
+       Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yawapisting7@gmail.com",
+        Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
+        To: "cimaciojay0@gmail.com",
+        From: "yawapisting7@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: htmlDoc.documentElement.innerHTML,
+       }).then((message) => alert(message));
+       });
+     });
    }
   </script>
  </head>
