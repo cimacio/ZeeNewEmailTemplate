@@ -6,33 +6,37 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
-   function sendEmail() {
-    // Load the external HTML file
-    const url = "index.html";
-    fetch(url)
-     .then((response) => {
+function sendEmail() {
+  // Load the external HTML file
+  const url = "index.html";
+  fetch(url)
+    .then((response) => {
       if (response.ok) {
-       return response.text();
+        return response.text();
       } else {
-       throw new Error("Error loading HTML file");
+        throw new Error("Error loading HTML file");
       }
-     })
-     .then((htmlBody) => {
+    })
+    .then((html) => {
+      // Replace the attribute values with the new pattern
+      const newHtml = html.replace(/\/img\/(.*?\.(?:png|jpg|jpeg|gif|svg))/g, 'https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/$1');
+
       // Send the email using SMTP.js
       Email.send({
-       Host: "smtp.elasticemail.com",
-       Username: "yawapisting7@gmail.com",
-       Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-       To: "cimaciojay0@gmail.com",
-       From: "yawapisting7@gmail.com",
-       Subject: "Test Email",
-       Body: htmlBody,
+        Host: "smtp.elasticemail.com",
+        Username: "yawapisting7@gmail.com",
+        Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
+        To: "cimaciojay0@gmail.com",
+        From: "yawapisting7@gmail.com",
+        Subject: "Test Email",
+        Body: newHtml,
       }).then((message) => alert(message));
-     })
-     .catch((error) => {
+    })
+    .catch((error) => {
       console.error(error);
-     });
-   }
+    });
+}
+
   </script>
  </head>
  <body style="width: 100vw; height: 60vh; display: flex; justify-content: center; align-items: center;">
