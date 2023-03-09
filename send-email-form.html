@@ -1,51 +1,87 @@
 <!DOCTYPE html>
-
 <html>
- <head>
-  <title>Send Mail</title>
+  <head>
+    <title>Send Mail</title>
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <script type="text/javascript">
-   function getHtmlAsString(url) {
-    return new Promise(function (resolve, reject) {
-     var xhr = new XMLHttpRequest();
-     xhr.open("GET", url, true);
-     xhr.responseType = "text/html";
-     xhr.onload = function () {
-      if (xhr.status === 200) {
-       var htmlString = xhr.responseText;
-       resolve(htmlString);
-      } else {
-       reject("Error loading file: " + xhr.statusText);
+    <script type="text/javascript">
+      function getHtmlAsString(url) {
+        return new Promise(function (resolve, reject) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", url, true);
+          xhr.responseType = "document"; // Change response type to document
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              var htmlString = new XMLSerializer().serializeToString(xhr.response);
+              resolve(htmlString);
+            } else {
+              reject("Error loading file: " + xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            reject("Network error while loading file.");
+          };
+          xhr.send();
+        });
       }
-     };
-     xhr.onerror = function () {
-      reject("Network error while loading file.");
-     };
-     xhr.send();
-    });
-   }
 
-   function sendEmail() {
-    let htmlBody = getHtmlAsString("index.html");
-    Email.send({
-     Host: "smtp.elasticemail.com",
-     Username: "yawapisting7@gmail.com",
-     Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-     To: "cimaciojay0@gmail.com",
-     From: "yawapisting7@gmail.com",
-     Subject: "Sending Email using javascript",
-     Body: "yawa ka",
-     Html: htmlBody,
-    }).then((message) => alert(message));
-   }
-  </script>
- </head>
-
- <body>
-  <form method="post">
-   <input type="button" value="Send Email" onclick="sendEmail()" />
-  </form>
- </body>
+      function sendEmail() {
+        let htmlBody = getHtmlAsString("index.html");
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yawapisting7@gmail.com",
+          Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
+          To: "cimaciojay0@gmail.com",
+          From: "yawapisting7@gmail.com",
+          Subject: "Sending Email using javascript",
+          Body: htmlBody,
+          Html: htmlBody,
+        }).then((message) => alert(message));
+      }
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <input type="button" value="Send Email" onclick="sendEmail()" />
+    </form>
+  </body>
 </html>
+
+
+// Load the external HTML file
+function loadHtmlFile(url) {
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.responseType = "document";
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        resolve(xhr.response);
+      } else {
+        reject("Error loading HTML file");
+      }
+    };
+    xhr.onerror = function() {
+      reject("Network error while loading HTML file");
+    };
+    xhr.send();
+  });
+}
+
+// Send the email using SMTP.js
+function sendEmail() {
+  loadHtmlFile("email-template.html").then(function(htmlDoc) {
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "your-email@gmail.com",
+      Password: "your-password",
+      To: "recipient-email@example.com",
+      From: "your-email@gmail.com",
+      Subject: "My Email Subject",
+      Body: htmlDoc.documentElement.innerHTML,
+    }).then(function(message) {
+      console.log(message);
+    });
+  });
+}
