@@ -18,6 +18,40 @@
      Subject: "Sending Email using javascript",
      Body: "Well that was easy!!",
      
+     function sendEmail() {
+  const email = 'recipient-email@example.com';
+  const subject = 'HTML email';
+
+  // Get the HTML file contents using an XMLHttpRequest object
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        // Create a new FormData object
+        const formData = new FormData();
+        formData.append('to', email);
+        formData.append('subject', subject);
+        formData.append('body', xhr.responseText);
+
+        // Send the form data as an email using your preferred email sending method
+        // For example, using the fetch API:
+        fetch('/send-email', {method: 'POST', body: formData})
+          .then(response => {
+            console.log('Email sent successfully!');
+          })
+          .catch(error => {
+            console.error('Email sending failed:', error);
+          });
+      } else {
+        console.error('Failed to get the HTML file:', xhr.status);
+      }
+    }
+  };
+  xhr.open('GET', 'path/to/email-template.html');
+  xhr.send();
+}
+
+     
      
     }).then((message) => alert(message));
    }
