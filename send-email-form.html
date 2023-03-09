@@ -46,3 +46,32 @@
   </form>
  </body>
 </html>
+
+
+function sendEmail() {
+  // Load the external HTML file
+  const url = "index.html";
+  fetch(url)
+    .then((response) => {
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error("Error loading HTML file");
+      }
+    })
+    .then((htmlBody) => {
+      // Send the email using SMTP.js
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "your-email@gmail.com",
+        Password: "your-password",
+        To: "recipient-email@example.com",
+        From: "your-email@gmail.com",
+        Subject: "My Email Subject",
+        Body: htmlBody,
+      }).then((message) => alert(message));
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
