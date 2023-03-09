@@ -8,6 +8,7 @@
 
   <script type="text/javascript">
     function sendEmail() {
+     
      Email.send({
       Host: "smtp.elasticemail.com",
       Username: "yawapisting7@gmail.com",
@@ -16,9 +17,6 @@
       From: "yawapisting7@gmail.com",
       Subject: "Sending Email using javascript",
       Body: "Well that was easy!!",
-      url = "index.html";
-      code = webread(url);
-      tree = htmlTree(code);
 
 
      }).then((message) => alert(message));
