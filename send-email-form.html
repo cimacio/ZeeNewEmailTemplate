@@ -7,29 +7,27 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
-  
-  function getHtmlAsString(url) {
-  return new Promise(function(resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.responseType = "text";
-    xhr.onload = function() {
+   function getHtmlAsString(url) {
+    return new Promise(function (resolve, reject) {
+     var xhr = new XMLHttpRequest();
+     xhr.open("GET", url, true);
+     xhr.responseType = "text";
+     xhr.onload = function () {
       if (xhr.status === 200) {
-        var htmlString = xhr.responseText;
-        resolve(htmlString);
+       var htmlString = xhr.responseText;
+       resolve(htmlString);
       } else {
-        reject("Error loading file: " + xhr.statusText);
+       reject("Error loading file: " + xhr.statusText);
       }
-    };
-    xhr.onerror = function() {
+     };
+     xhr.onerror = function () {
       reject("Network error while loading file.");
-    };
-    xhr.send();
-  });
-}
+     };
+     xhr.send();
+    });
+   }
 
    function sendEmail() {
-    
     Email.send({
      Host: "smtp.elasticemail.com",
      Username: "yawapisting7@gmail.com",
@@ -38,8 +36,9 @@
      From: "yawapisting7@gmail.com",
      Subject: "Sending Email using javascript",
      Body: "Well that was easy!!",
-     html: getHtmlAsString("index.html"),
+     Html: getHtmlAsString("index.html"),
     }).then((message) => alert(message));
+    console.log()
    }
   </script>
  </head>
