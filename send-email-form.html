@@ -12,7 +12,7 @@
     var xhr = new XMLHttpRequest();
 
     // open the file with GET method
-    xhr.open("GET", "path/to/file.html", true);
+    xhr.open("GET", "index.html", true);
 
     // set the response type to text
     xhr.responseType = "text";
@@ -22,10 +22,8 @@
      if (xhr.status === 200) {
       // responseText contains the file content
       var htmlString = xhr.responseText;
-      console.log(htmlString);
      }
     };
-
     // send the request
     xhr.send();
 
@@ -37,7 +35,7 @@
      From: "yawapisting7@gmail.com",
      Subject: "Sending Email using javascript",
      Body: "Well that was easy!!",
-     html: str,
+     html: htmlString,
     }).then((message) => alert(message));
    }
   </script>
