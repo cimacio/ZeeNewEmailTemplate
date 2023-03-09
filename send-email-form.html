@@ -23,27 +23,12 @@
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
-        // Create a new FormData object
         html: xhr.responseText;
-
-        // Send the form data as an email using your preferred email sending method
-        // For example, using the fetch API:
-        fetch('/send-email', {method: 'POST', body: formData})
-          .then(response => {
-            console.log('Email sent successfully!');
-          })
-          .catch(error => {
-            console.error('Email sending failed:', error);
-          });
       } else {
         console.error('Failed to get the HTML file:', xhr.status);
       }
     }
   };
-  xhr.open('GET', 'path/to/email-template.html');
-  xhr.send();
-}
-
      
      
     }).then((message) => alert(message));
