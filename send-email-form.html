@@ -8,24 +8,7 @@
 
   <script type="text/javascript">
    function sendEmail() {
-    // create a new XHR object
-    var xhr = new XMLHttpRequest();
 
-    // open the file with GET method
-    xhr.open("GET", "index.html", true);
-
-    // set the response type to text
-    xhr.responseType = "text";
-
-    // handle the onload event
-    xhr.onload = function () {
-     if (xhr.status === 200) {
-      // responseText contains the file content
-      var htmlString = xhr.responseText;
-     }
-    };
-    // send the request
-    xhr.send();
 
     Email.send({
      Host: "smtp.elasticemail.com",
