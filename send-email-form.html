@@ -28,6 +28,7 @@
    }
 
    function sendEmail() {
+    let htmlBody = getHtmlAsString("index.html");
     Email.send({
      Host: "smtp.elasticemail.com",
      Username: "yawapisting7@gmail.com",
@@ -36,9 +37,9 @@
      From: "yawapisting7@gmail.com",
      Subject: "Sending Email using javascript",
      Body: "Well that was easy!!",
-     Html: getHtmlAsString("index.html"),
+     Html: htmlBody,
     }).then((message) => alert(message));
-    console.log(message);
+    console.log(htmlBody);
    }
   </script>
  </head>
