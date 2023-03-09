@@ -11,7 +11,7 @@
     return new Promise(function (resolve, reject) {
      var xhr = new XMLHttpRequest();
      xhr.open("GET", url, true);
-     xhr.responseType = "document";
+     xhr.responseType = "text/html";
      xhr.onload = function () {
       if (xhr.status === 200) {
        var htmlString = xhr.responseText;
