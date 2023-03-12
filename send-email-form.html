@@ -4,22 +4,19 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
  <title>Send Mail</title>
+ 
+ <!-- for: yawapisting7@gmail.com
+ password: '6ACA3A80D6867C2A399393871D6F110CD26C' -->
 
  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
  <script type="text/javascript">
   function sendEmail() {
 
- const sendBtn = document.getElementById('sendBtn');
- const container = document.getElementById('container');
-   
    // Load the external HTML file
    const url = "index.html";
    fetch(url)
     .then((response) => {
-     container.style.backgroundSize = '100%';
-     sendBtn.value = 'Sending...';
-     sendBtn.disabled = true;
      if (response.ok) {
       return response.text();
      } else {
@@ -36,18 +33,13 @@
      // Send the email using SMTP.js
      Email.send({
       Host: "smtp.elasticemail.com",
-      Username: "yawapisting7@gmail.com",
-      Password: "6ACA3A80D6867C2A399393871D6F110CD26C",
-      To: "cimacioz@gmail.com",
-      From: "yawapisting7@gmail.com",
+      Username: "cimaciojay0@gmail.com",
+      Password: "ACD3AED64805087DAD079957C31D08C0B682",
+      To: "yawapisting7@gmail.com",
+      From: "cimaciojay0@gmail.com",
       Subject: "Test Email",
       Body: newHtml,
-     }).then((message) => {
-       alert(message);
-       container.style.backgroundSize = 0;
-       sendBtn.value = 'Send Email';
-       sendBtn.disabled = false;
-     });
+     }).then((message) => alert(message));
     })
     .catch((error) => {
      console.error(error);
