@@ -1,65 +1,103 @@
 <!DOCTYPE html>
 <html>
-
-<head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
- <title>Send Mail</title>
- 
- <!-- for: yawapisting7@gmail.com
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Send Mail</title>
+     <!-- for: yawapisting7@gmail.com
  password: '6ACA3A80D6867C2A399393871D6F110CD26C' -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style>
+      body {
+        width: 100vmin;
+        height: 100vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #container {
+        width: 50%;
+        height: 50%;
+        background-image: url('/img/loader.gif');
+        background-repeat: no-repeat;
+        background-size: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: 50%;
+      }
+      #sendBtn {
+        border-radius: 5vmin;
+        width: 30vmin;
+        height: 10vmin;
+        border: none;
+        mix-blend-mode: multiply;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        font-size: 2vmin;
+        color: #2f3e56;
+        letter-spacing: 1vmin;
+        text-indent: 1vmin;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form method="post">
+        <input id="sendBtn" type="button" value="Send Email" onclick="sendEmail()" />
+      </form>
+    </div>
+    <script>
+      const sendBtn = document.getElementById('sendBtn');
+      const container = document.getElementById('container');
 
- <script src="https://smtpjs.com/v3/smtp.js"></script>
+      function sendEmail() {
+        // Disable the send button and show the loader
+        sendBtn.value = 'Sending...';
+        sendBtn.disabled = true;
+        container.style.backgroundSize = '100%';
 
- <script type="text/javascript">
-  function sendEmail() {
+        // Load the external HTML file
+        fetch('index.html')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Error loading HTML file');
+            }
+            return response.text();
+          })
+          .then(html => {
+            // Replace the attribute values with the new pattern
+            const newHtml = html.replace(
+              /\/img\/(.*?\.(?:png|jpg|jpeg|gif|svg))/g,
+              'https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/$1'
+            );
 
-   // Load the external HTML file
-   const url = "index.html";
-   fetch(url)
-    .then((response) => {
-     if (response.ok) {
-      return response.text();
-     } else {
-      throw new Error("Error loading HTML file");
-     }
-    })
-    .then((html) => {
-     // Replace the attribute values with the new pattern
-     const newHtml = html.replace(
-      /\/img\/(.*?\.(?:png|jpg|jpeg|gif|svg))/g,
-      "https://raw.githubusercontent.com/cimacio/ZeeNewEmailTemplate/main/img/$1"
-     );
-
-     // Send the email using SMTP.js
-     Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "cimaciojay0@gmail.com",
-      Password: "ACD3AED64805087DAD079957C31D08C0B682",
-      To: "yawapisting7@gmail.com",
-      From: "cimaciojay0@gmail.com",
-      Subject: "Test Email",
-      Body: newHtml,
-     }).then((message) => alert(message));
-    })
-    .catch((error) => {
-     console.error(error);
-    });
-  }
- </script>
-</head>
-
-<body style="
-   width: 100vmin;
-   height: 100vmin;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  ">
- <div id="container" style="width: 50%; height: 50%; background-image: url('/img/loader.gif'); background-repeat: no-repeat; background-size: 0; display: flex; justify-content: center; align-items: center; background-position: 50%;">
-  <form method="post" style="width: 80%; height: 80%; display: flex; justify-content: center; align-items: center;">
-   <input id="sendBtn" type="button" value="Send Email" onclick="sendEmail()" style="border-radius: 40px; width: 65%; height: 20%; border: none; mix-blend-mode: multiply; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 2vmin; color: #2f3e56; letter-spacing: 1vmin; text-indent: 1vmin; font-weight: bold;" />
-  </form>
- </div>
-</body>
-
+            // Send the email using SMTP.js
+            Email.send({
+              Host: 'smtp.elasticemail.com',
+              Username: 'cimaciojay0@gmail.com',
+              Password: 'ACD3AED64805087DAD079957C31D08C0B682',
+              To: 'cimaciojay0@gmail.com',
+              From: 'cimaciojay0@gmail.com',
+              Subject: 'Test Email',
+              Body: newHtml
+            })
+              .then(message => {
+                alert(message);
+              })
+              .catch(error => {
+                console.error(error);
+              })
+              .finally(() => {
+                // Enable the send button and hide the loader
+                sendBtn.value = 'Send Email';
+                sendBtn.disabled = false;
+                container.style.backgroundSize = 0;
+              });
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
+    </script>
+  </body>
 </html>
